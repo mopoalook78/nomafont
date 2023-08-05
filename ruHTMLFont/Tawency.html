@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      @font-face { font-family: Tawency; src: url('../font/Tawency-Sans.ttf'); }
+      @font-face { font-family: Gotham Bold; font-style: Bold; src: url('../font/Gotham Text/Gotham-Bold.ttf'); }
+    </style>
+          <style>    
+         [contenteditable="true"] { padding: 10px; outline: 5px dashed #000; }    
+         [contenteditable="true"]:hover { outline: 5px dashed #F00; background: }    
+      </style> 
+  </head>
+  <link rel="icon" href="../Icon Font.ico">
+    <meta charset="UTF-8">
+  <title>Tawency Sans</title>
+  <body>
+  <p style="font-family:Tawency;font-size:100px;text-align:center" contenteditable="true">!"#$%&'()*+,-. /0123456789:;<=>? @ABCDEFGHIJKLMN OPQRSTUVWXYZ [\]^_` abcdefghijklmno pqrstuvwxyz{|}~ ЂЃ‚ѓ„…†‡€‰Љ‹ЊЌЋЏђ‘’“” •–—™љ›њќћџ ЎўЈ¤ Ґ¦§Ё©Є«¬­®Ї °±Ііґµ¶·ё№є»јЅѕї АБВГДЕЖЗИЙКЛМН ОПРСТУФХЦЧШЩЪЫЬЭЮЯ абвгдеёжзийклмн опрстуфхцчшщъыьэюя ☺☻♥♦♣♠◘○◙♂♀♪ ☼►◄ ¶§▬ ▲▼ ░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴ ┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥</p>
+<div id="clock" style="font-family:Tawency;font-size:230px;text-align:center" onload="currentTime()">
+<script>
+  function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = ""
+
+    
+  if(hh > 12){
+      session = ""
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time; 
+  let t = setTimeout(function(){ currentTime() }, 1000); 
+
+}
+
+currentTime();
+</script>
+</div>
+  <a href="../index.html"><p style="font-family:Gotham Bold;font-size:36px;text-align:center">Главная</p></a>
+  </body>
+</html>
