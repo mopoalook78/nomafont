@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+.button {
+  background-color: rgb(221,255,255);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: black; 
+  color: rgb(221,255,255);
+  border: 2px solid rgb(221,255,255);
+}
+
+.button1:hover {
+  background-color: rgb(221,255,255);
+  color: black;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Time 5</title>
+  </head>
+  <body>
+<div id="clock" style="font-family:Cascadia Mono;text-align:center;font-size: 180px">
+<script>
+  function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "LN"
+
+    
+  if(hh > 12){
+      session = "XZ"
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time; 
+  let t = setTimeout(function(){ currentTime() }, 1000); 
+
+}
+
+currentTime();
+</script>
+</div>
+</body>
+</html>
