@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: default;
+}
+
+.button1 {
+  background-color: transparent; 
+  color: white; 
+  border: 2px solid white;
+}
+
+.button1:hover {
+  background-color: white;
+  color: rgb(0, 0, 0, 255);
+}
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
+</style>
+<style>
+      .gradient {
+        background-color: blue; 
+        background-image: linear-gradient(rgb(0,0,174), rgb(57,206,226)); 
+      }
+</style>
+    <meta charset="UTF-8">
+    <title>Time</title>
+  </head>
+  <body style="font-family:'Exo 2';font-feature-settings:'tnum';font-size: 280px;text-align:center;color:white" class="gradient">
+    <div id='controls'>
+      <button class="button button1" style="width: 400px;height: 130px;font-size: 100px;font-family:'Exo 2';text-align: center;border-radius: 50px" onclick='startTimer()' id='go'>+</button>
+      <button class="button button1" style="width: 400px;height: 130px;font-size: 100px;font-family:'Exo 2';text-align: center;border-radius: 50px;display: none" onclick='stopTimer()' id='stop'>-</button>
+      <button class="button button1" style="width: 400px;height: 130px;font-size: 100px;font-family:'Exo 2';text-align: center;border-radius: 50px;display: none" onclick='clearTimer()' id='clear'>*</button>
+    </div>
+    <div id='timer'>00:00:00:00</div>
+    <div id='labels'>
+      <span id='hh'></span>
+      <span id='mm'></span>
+      <span id='ss'></span>
+      <span id='ms'></span>
+    </div>
+    <script>
+T = {} ;
+T.timerDiv = document.getElementById('timer');
+
+function displayTimer() {
+
+  var hours='00', minutes='00',
+  miliseconds='00', seconds='00',
+  time = '',
+  timeNow = new Date().getTime();
+
+  T.difference = timeNow - T.timerStarted;
+
+
+  if(T.difference > 10) {
+    miliseconds = Math.floor((T.difference % 1000) / 10);
+    if(miliseconds < 10) {
+      miliseconds = '0'+String(miliseconds);
+    }
+  }
+
+  if(T.difference > 1000) {
+    seconds = Math.floor((T.difference % (1000 * 60)) / 1000);
+    if (seconds > 59) {
+      seconds = seconds % 100;
+    }
+    if(seconds < 10) {
+      seconds = '0'+String(seconds);
+    }
+  }
+
+
+  if(T.difference > 60000) {
+    minutes = Math.floor((T.difference % (60000 * 60)) / 60000);
+    if (minutes > 59) {
+      minutes = minutes % 100;
+    }
+    if(minutes < 10) {
+      minutes = '0'+String(minutes);
+    }
+  }
+
+
+  if(T.difference > 3600000) {
+    hours = Math.floor((T.difference % 3600000) / 3600000);
+    if (hours > 99) {
+      hours = hours % 100;
+    }
+    if(hours < 10) {
+      hours = '0'+String(hours);
+    }
+  }
+
+  time  =  hours   + ':'
+  time += minutes + ':'
+  time += seconds + ':'
+  time += miliseconds;
+
+  T.timerDiv.innerHTML = time;
+}
+
+function startTimer() {
+
+  T.timerStarted = new Date().getTime()
+  console.log('T.timerStarted: '+T.timerStarted)
+
+  if (T.difference > 0) {
+    T.timerStarted = T.timerStarted - T.difference
+  }
+
+  T.timerInterval = setInterval(function() {
+    displayTimer()
+  }, 10);
+
+  document.getElementById('go').style.display="none";
+  document.getElementById('stop').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+
+function stopTimer() {
+  clearInterval(T.timerInterval);
+
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="inline";
+}
+
+function clearTimer() {
+  clearInterval(T.timerInterval);
+  T.timerDiv.innerHTML = "00:00:00:00";
+  T.difference = 0;
+
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+    </script>
+  </body>
+</html>
