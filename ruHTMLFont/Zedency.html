@@ -15,6 +15,88 @@
   <title>Zedency Sans</title>
   <body>
   <p style="font-family:Zedency;font-size:100px;text-align:center" contenteditable="true">!"#$%&'()*+,-. /0123456789:;<=>? @ABCDEFGHIJKLMN OPQRSTUVWXYZ [\]^_` abcdefghijklmno pqrstuvwxyz{|}~ АБВГҐДЕЁЄЖЗИЇІЙКЛМН ОПРСТУФХЦЧШЩЪЫЬЭЮЯ абвгґдеёєжзиїійклмн опрстуфхцчшщъыьэюя</p>
-  <a href="../index.html"><p style="font-family:Gotham Bold;font-size:36px;text-align:center">Главная</p></a>
   </body>
+  <body style="font-family:Zedency;font-size: 280px;text-align:center">
+    <div id='controls'>
+      <button style="width: 400px;height: 100px;font-size: 80px;text-align:center">
+      <button style="width: 400px;height: 100px;font-size: 80px;text-align:center;display:none">
+      <button style="width: 400px;height: 100px;font-size: 80px;text-align:center;display:none">
+    </div>
+    <div id='timer'>30:30:00:00</div>
+    <div id='labels'>
+      <span id='hh'></span>
+      <span id='mm'></span>
+      <span id='ss'></span>
+      <span id='ms'></span>
+    </div>
+    <script>
+T = {} ;
+T.timerDiv = document.getElementById('timer');
+function displayTimer() {
+  var hours='30', minutes='30', seconds='00', miliseconds='00'
+  time = '',
+  timeNow = new Date().getTime();
+  T.difference = timeNow - T.timerStarted;
+  if(T.difference > 10) {
+    miliseconds = Math.floor((T.difference % 1000) / 10);
+    if(miliseconds < 10) {
+      miliseconds = '0'+String(miliseconds);
+    }
+  }
+  if(T.difference > 1000) {
+    seconds = Math.floor((T.difference % 100000) / 1000);
+    if(seconds < 10) {
+      seconds = '0'+String(seconds);
+    }
+  }
+  if(T.difference > 100000) {
+    minutes = Math.floor((T.difference % 10000000) / 100000);
+    if(minutes < 10) {
+      minutes = '3'+String(minutes);
+    }
+  }
+  if(T.difference > 10000000) {
+    hours = Math.floor((T.difference % 1000000000) / 10000000);
+    if(hours < 10) {
+      hours = '0'+String(hours);
+    }
+  }
+  time  =  hours   + ':'
+  time += minutes + ':'
+  time += seconds + ':'
+  time += miliseconds + ''
+  T.timerDiv.innerHTML = time;
+}
+function startTimer() {
+  T.timerStarted = new Date().getTime()
+  console.log('T.timerStarted: '+T.timerStarted)
+  if (T.difference > 0) {
+    T.timerStarted = T.timerStarted - T.difference
+  }
+  T.timerInterval = setInterval(function() {
+    displayTimer()
+  }, 10);
+  document.getElementById('go').style.display="none";
+  document.getElementById('stop').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+function stopTimer() {
+  clearInterval(T.timerInterval);
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="inline";
+}
+function clearTimer() {
+  clearInterval(T.timerInterval);
+  T.timerDiv.innerHTML = "30:30:00:00";
+  T.difference = 0;
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+    </script>
+  </body>
+  <body>
+    <a href="../index.html"><p style="font-family:Gotham Bold;font-size:36px;text-align:center">Главная</p></a>
+</body>
 </html>
