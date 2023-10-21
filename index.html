@@ -1,90 +1,126 @@
 <!-- This site created 05/08/2023 (05 August 2023). -->
 <!Doctype HTML>
 <html>
-  <head>
-    <style>
-      @font-face { font-family: Gotham; font-style: Bold; src: url('font/Gotham Text/Gotham-Bold.ttf'); }
-    </style>
-    <style>
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 </style>
-    <link rel="icon" href="Icon Font.ico">
-    <meta charset="UTF-8">
-    <title>Nomafont Шрифты</title>
-  </head>
+<script> 
+    var changeFontStyle = function (font) { 
+        document.getElementById( 
+            "output-text").style.fontFamily 
+                    = font.value; 
+    } 
+</script>
+<script> 
+    var changeColor = function (color) { 
+        document.getElementById( 
+            "output-text").style.color 
+                    = color.value; 
+    } 
+</script>
+<script>
+    function myFunction(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.fontSize = listValue;
+    }
+    </script>
+<body style="font-family: Open Sans;text-align: center">
+<text>Шрифт:<text></text>
+<select id="input-font" class="input"
+onchange="changeFontStyle (this);"> 
+<option value="Times New Roman" 
+    selected="selected"> 
+    Times New Roman 
+</option> 
+<option value="Open Sans">Open Sans</option> 
+<option value="fantasy">Fantasy</option> 
+<option value="cursive">cursive</option> 
+</select>
+<text style="margin-left:10px">Цвет теста:<text></text>
+<select id="input-font" class="input"
+onchange="changeColor (this);"> 
+<option value="Black" 
+    selected="selected"> 
+    Чёрный 
+</option> 
+<option value="Red">Красный</option> 
+<option value="#F60">Оранжевый</option> 
+<option value="#F90">Оранжевый 2</option>
+<option value="#FC0">Золотистый</option> 
+</select>
+<text style="margin-left:10px">Размер теста:<text>
+<select onchange="myFunction(this);"> 
+<option>1px</option>
+<option>2px</option>
+<option>3px</option>
+<option>4px</option>
+<option>5px</option>
+<option>6px</option> 
+<option>7px</option> 
+<option>8px</option> 
+<option>9px</option> 
+<option>10px</option> 
+<option>11px</option>
+<option>12px</option>
+<option>14px</option> 
+<option>16px</option> 
+<option>18px</option>  
+<option>20px</option>
+<option>50px</option>  
+<option>100px</option>
+<option>200px</option>  
+</select>
+<p id="output-text" contenteditable="true">1234567890</p>
+</body>
 <body>
-<p align="center"><img src="Shrifty.png"></p>
-<p style="font-family:Gotham;font-size:102px;text-align:center">NOMAFONT ШРИФТЫ</p>
-<p align="center"><img src="ImageFont/AvantGarde.png"></p>
-<a href="ruHTMLFont/AvanteGothic.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Avenir Next W.png"></p>
-<a href="ruHTMLFont/AvenirNextW.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Avetger Gothic.png"></p>
-<p align="center"><img src="ImageFont/Bookman New Serif.png"></p>
-<a href="ruHTMLFont/BookmanNewSerif.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/BookmanSans.png"></p>
-<a href="ruHTMLFont/BookmanSans.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Europen.png"></p>
-<a href="ruHTMLFont/Europen.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Eurostyle.png"></p>
-<a href="ruHTMLFont/EurostyleNext.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Exo3.png"></p>
-<p align="center"><img src="ImageFont/Freesetriad.png"></p>
-<a href="ruHTMLFont/Freesetriad.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/FrutigerNextP.png"></p>
-<a href="ruHTMLFont/FrutigerNextP.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Gotham Text.png"></p>
-<a href="ruHTMLFont/GothamText.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/GothamTextSemiCond.png"></p>
-<a href="ruHTMLFont/GothamTextSemiCond.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/GothamTextCond.png"></p>
-<a href="ruHTMLFont/GothamTextCond.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Gothamriad.png"></p>
-<a href="ruHTMLFont/GothamriadPro.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Helvetriad.png"></p>
-<p align="center"><img src="ImageFont/MonorialMonospace.png"></p>
-<a href="ruHTMLFont/MonorialMonospace.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Monotype.png"></p>
-<a href="ruHTMLFont/Monotype.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Revue.png"></p>
-<a href="ruHTMLFont/Revue.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Romanus.png"></p>
-<a href="ruHTMLFont/Romanus.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Slavic New Style.png"></p></a>
-<a href="ruHTMLFont/SlavicNewStyle.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Taporovegro.png"></p>
-<a href="ruHTMLFont/Taporovegro.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Tawency.png"></p>
-<a href="ruHTMLFont/Tawency.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Tisemyriad.png"></p>
-<a href="ruHTMLFont/Tisemyriad.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/ZawencySans.png"></p>
-<a href="ruHTMLFont/ZawendySans.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
-<p align="center"><img src="ImageFont/Zedency.png"></p>
-<a href="ruHTMLFont/Zedency.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Предпросмотр Шрифта</button></p></a>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Russian()">Русский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="English()">Английский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Polish()">Польский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Czech()">Чешский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Slovak()">Словацкий</button>    
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Ukrainian()">Украинский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Azerbaijan()">Азербайджанский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Udmurt()">Удмуртский</button>
+    <button style="font-size: 24px;font-family: Open Sans;display: inline-block" onclick="Yakut()">Якутский</button>          
+    <script>
+        function Russian() {
+            document.getElementById("output-text").innerHTML =
+                "Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Йй Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя";
+        }
+        function English() {
+            document.getElementById("output-text").innerHTML =
+                "Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz";
+        }
+        function Polish() {
+            document.getElementById("output-text").innerHTML =
+                "Aa Ąą Bb Cc Ćć Dd Ee Ęę Ff Gg Hh Ii Jj Kk Ll ŁŁ Mm Nn Ńń Oo Óó Pp Rr Ss Śś Tt Uu Ww Yy Zz Źź Żż";
+        }
+        function Czech() {
+            document.getElementById("output-text").innerHTML =
+                "Aa Áá Bb Cc Čč Dd Ee Éé Ěě Ff Gg Hh Ii Íí Jj Kk Ll Mm Nn Ňň Oo Óó Pp Qq Rr Řř Ss Šš Tt Ťť Uu Úú Ůů Vv Ww Xx Yy Ýý Zz Žž";
+        }
+        function Slovak() {
+            document.getElementById("output-text").innerHTML =
+                "Aa Áá Ää Bb Cc Čč Dd Ee Éé Ff Gg Hh Ii Íí Jj Kk Ll Ĺĺ Ľľ Mm Nn Ňň Oo Óó Ôô Pp Qq Rr Ŕŕ Ss Šš Tt Ťť Uu Úú Vv Ww Xx Yy Ýý Zz Žž";
+        }
+        function Ukrainian() {
+            document.getElementById("output-text").innerHTML =
+                "Аа Бб Вв Гг Ґґ Дд Ее Єє Жж Зз Ии Іі Її Йй Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ ЬЬ Юю Яя";
+        }
+        function Azerbaijan() {
+            document.getElementById("output-text").innerHTML =
+                "Аа Бб Вв Гг Ғғ Дд Ее Әә Жж Зз Ии Јј Кк Ҝҝ Лл Мм Нн Оо Өө Пп Рр Сс Тт Уу Үү Фф Хх Һһ Чч Ҹҹ Шш Ыы '";
+        }
+        function Udmurt() {
+            document.getElementById("output-text").innerHTML =
+            "Аа Бб Вв Гг Дд Ее Ёё Жж Ӝӝ Зз Ӟӟ Ии Ӥӥ Йй Кк Лл Мм Нн Оо Ӧӧ Пп Рр Сс Тт Уу Фф Хх Цц Чч Ӵӵ Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя";
+        }
+        function Yakut() {
+            document.getElementById("output-text").innerHTML =
+            "Аа Бб Вв Гг Ҕҕ(Ғғ) Дд Ее Ёё Жж Зз Ии Йй Кк Лл Мм Нн Ҥҥ Оо Өө Пп Рр Сс Һһ Тт Уу Үү Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя";
+        }
+    </script>
 <a href="Fonts.zip"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:80px;text-align:center">СКАЧАТЬ ПОЛНУЮ КОЛЛЕКЦИЮ ШРИФТА</button></p></a>
 <a href="indexeng.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:48px;text-align:center">ИНГЛИШ ВЕРСИЯ</button></p></a>
 <a href="help.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:60px;text-align:center">ПОМОЧЬ ПРОЕКТУ!</button></p></a>
