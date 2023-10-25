@@ -74,23 +74,27 @@
     src: url('font/Zedency-Sans.otf');
 }
 select.solect {
-  background-color: rgb(0, 137, 255);
+  background-color: rgb(0, 189, 255);
   color: white;
   display: inline-block;
   transition-duration: 0.4s;
   border: none;
+  font-weight: bold;
+  font-family: Gothamgard Bold, 'Segoe UI';
   border-radius:10px;
   margin: 6px;
 }
 
 select.solect:hover {
   background-color: white;
-  color: rgb(0, 137, 255);
+  color: rgb(0, 189, 255);
+  font-weight: bold;
+  font-family: Gothamgard Bold, 'Segoe UI';
   border-radius:10px;
   margin: 6px;
 }
 .button1 {
-  background-color: rgb(0, 137, 255);
+  background-color: rgb(0, 189, 255);
   color: white;
   display: inline-block;
   transition-duration: 0.4s;
@@ -101,7 +105,7 @@ select.solect:hover {
 
 .button1:hover {
   background-color: white;
-  color: rgb(0, 137, 255);
+  color: rgb(0, 189, 255);
   border-radius:10px;
   margin: 6px;
 }
@@ -118,7 +122,7 @@ margin: 0 auto;
 padding: 7px 2%;
 }
 a.button2:hover {
-  background-color: rgb(0, 137, 255);
+  background-color: rgb(0, 189, 255);
   color: white;
 }
 </style>    
@@ -250,7 +254,7 @@ a.button2:hover {
 </br>
 </br>
 <text style="font-size: 24px">ШРИФТ:</text>
-<select id="input-font" style="font-family:Segoe UI;font-size: 24px" class="input"
+<select class="solect" id="input-font" style="font-size: 24px" class="input"
 onchange="changeFontStyle (this);"> 
 <option value="Avetger Gothic">Avetger Gothic</option>
 <option value="Avetger Gothic ExtraBold">Avetger Gothic ExtraBold</option>
@@ -272,7 +276,7 @@ onchange="changeFontStyle (this);">
 <option value="Zedency Sans">Zedency Sans</option>  
 </select>
 <text style="margin-left:10px">ЦВЕТ ТЕКСТА:</text>
-<select style="font-family:Segoe UI;font-size: 24px" id="input-font" class="input"
+<select class="solect" style="font-size: 24px" id="input-font" class="input"
 onchange="changeColor (this);"> 
 <option value="Black">Чёрный</option>
 <option value="White">Белый</option> 
@@ -300,7 +304,7 @@ onchange="changeColor (this);">
 <option value="Fuchsia">Розовый</option>      
 </select>
 <text style="margin-left:10px">ФОН ТЕКСТА:</text>
-<select style="font-family:Segoe UI;font-size: 24px" id="input-font" class="input"
+<select class="solect" style="font-size: 24px" id="input-font" class="input"
 onchange="changeBackgroundColor (this);"> 
 <option value="Black">Чёрный</option>
 <option value="White">Белый</option> 
@@ -328,7 +332,7 @@ onchange="changeBackgroundColor (this);">
 <option value="Fuchsia">Розовый</option>          
 </select>
 <text style="margin-left:10px">РАЗМЕР ТЕКСТА:</text>
-<select style="font-family:Segoe UI;font-size: 24px" onchange="myFunction(this);"> 
+<select class="solect" style="font-size: 24px" onchange="myFunction(this);"> 
 <option>1px</option>
 <option>2px</option>
 <option>3px</option>
@@ -377,11 +381,11 @@ onchange="changeBackgroundColor (this);">
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Moldova()">Молдовеняскэ</button>
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Doreform()">Дореформенный</button>
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Ukrainian()">Українська</button> 
-    <a class="button2" style="font-size:80px;-webkit-text-stroke: 1px rgb(0, 137, 255)" href="Fonts.zip">СКАЧАТЬ ПОЛНУЮ КОЛЛЕКЦИЮ ШРИФТА</a>
-    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 137, 255)" href="indexeng.html">ИНГЛИШ ВЕРСИЯ</a>
-    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 137, 255)" href="help.html">ПОМОЧЬ ПРОЕКТУ!</a>
-    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 137, 255)" href="https://fontdrop.info/">ПРОВЕРИТЬ ШРИФТ</a>
-    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 137, 255)" href="https://nomafont78.fandom.com/ru/wiki/Nomafont78_%D0%92%D0%B8%D0%BA%D0%B8/">FANDOM ВИКИПЕДИЯ</a>
+    <a class="button2" style="font-size:80px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="Fonts.zip">СКАЧАТЬ ПОЛНУЮ КОЛЛЕКЦИЮ ШРИФТА</a>
+    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="indexeng.html">ИНГЛИШ ВЕРСИЯ</a>
+    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="help.html">ПОМОЧЬ ПРОЕКТУ!</a>
+    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="https://fontdrop.info/">ПРОВЕРИТЬ ШРИФТ</a>
+    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="https://nomafont78.fandom.com/ru/wiki/Nomafont78_%D0%92%D0%B8%D0%BA%D0%B8/">FANDOM ВИКИПЕДИЯ</a>
   <p style="font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11';font-size:60px;text-align:center">
   © 2023 NOMAFONT
 </p>
