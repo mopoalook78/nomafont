@@ -1,5 +1,5 @@
 <!-- Сайт был сделан 5 авг 2023 -->
-<!-- Редактирование шрифта (7 дек 2022 - 21 октября 2023) -->
+<!-- Редактирование шрифта (7 дек 2022 - 23 декабря 2023) -->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -63,11 +63,11 @@
 }
 @font-face {
     font-family: Taporovegro;
-    src: url('font/Taporovegro-Serif.ttf');
+    src: url('font/Taporovegro-Serif.otf');
 }
 @font-face {
     font-family: Tawency Sans;
-    src: url('font/Tawency-Sans.ttf');
+    src: url('font/Tawency-Sans.otf');
 }
 @font-face {
     font-family: Zedency Sans;
@@ -248,6 +248,10 @@ a.button2:hover {
             document.getElementById("output-text").innerHTML =
                 "Аа Әә Бб Вв Гг Ғғ Дд Ее Ёё Жж Зз Ии Йй Кк Ққ Лл Мм Нн Ңң Оо Өө Пп Рр Сс Тт Уу Ұұ Үү Фф Хх Һһ Цц Чч Шш Щщ Ъъ Ыы Іі Ьь Ээ Юю Яя";
         }
+        function Churchslavic() {
+            document.getElementById("output-text").innerHTML =
+                "Аа Бб Вв Гг Дд Ее Єє Жж Ѕѕ Ꙁꙁ Зз Ии Іі Її Кк Лл Мм Нн Оо Ѡѡ Пп Рр Сс Тт Ѹѹ Ꙋꙋ Фф Хх Ѿѿ Цц Чч Шш Щщ Ъъ Ыы Ьь Ꙑꙑ Ѣѣ Ээ Юю Ꙗꙗ Ѧѧ Ѯѯ Ѱѱ Ѳѳ Ѵѵ";
+        }
     </script>
 <header>
 <body style="text-align: center;background-color: black;color:white;font-size: 24px;font-family: Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'">
@@ -379,6 +383,7 @@ onchange="changeBackgroundColor (this);">
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="MultiLan()">Многоязычная кириллица</button>
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Bashkir()">Башҡорт</button>
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Serbian()">Српски</button>
+    <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Churchslavic()">Церковнославянский</button> 
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Makedonia()">Македонски</button>
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Gagauzia()">Гагаузча</button>
     <button class="button1" style="font-size: 32px;font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11'" onclick="Moldova()">Молдовеняскэ</button>
@@ -389,7 +394,13 @@ onchange="changeBackgroundColor (this);">
     <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="help.html">ПОМОЧЬ ПРОЕКТУ!</a>
     <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="https://fontdrop.info/">ПРОВЕРИТЬ ШРИФТ</a>
     <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="https://nomafont78.fandom.com/ru/wiki/Nomafont78_%D0%92%D0%B8%D0%BA%D0%B8">FANDOM ВИКИПЕДИЯ</a>
-  <p style="font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11';font-size:60px;text-align:center">
+    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="https://www.fontconverter.io/en/otf-to-svg">КОНВЕРТИРОВАТЬ OTF ШРИФТ В SVG</a>
+    <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="https://www.fontconverter.io/en/ttf-to-svg">КОНВЕРТИРОВАТЬ TTF ШРИФТ В SVG</a>
+    <p style="font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss12';font-size:60px;text-align:center">
+        ПРИМЕР SVG ВЕРТИКАЛИ:<code style="font-family:Inconsolata">style="transform-origin:0;transform:scale(1, -1)"</code>
+      </p>
+    <br/>
+    <p style="font-family:Gothamgard Bold;font-feature-settings: 'ss02','ss09','ss10','ss11';font-size:60px;text-align:center">
   © 2023 NOMAFONT
 </p>
 </body>
