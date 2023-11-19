@@ -144,6 +144,10 @@ a.button2:hover {
     }
     </script>
     <script>
+        function Numbers() {
+            document.getElementById("output-text").innerHTML =
+                "0123456789";
+        }
         function Svito() {
             document.getElementById("output-text").innerHTML =
                 "Аа Бб Вв В&#x0308;в&#x0308; Гг Дд Ее Ёё Жж Зз Ии Йй Кк К&#x0308;к&#x0308; К&#x0328;к&#x0328; Лл Л&#x0308;л&#x0308; Мм М&#x0308;м&#x0308; Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя";
@@ -354,31 +358,32 @@ onchange="changeBackgroundColor (this);">
 <p id="output-text" contenteditable="true">1234567890</p>
     <text style="font-size: 108px;text-align: center">ЯЗЫК ТЕКСТА:</text>
     <br>
-    <button class="button1" style="font-size: 32px" onclick="Svito()">Свитошинский</button>
-    <button class="button1" style="font-size: 32px" onclick="Russian()">Русский/Мокша/Эрзя</button>
-    <button class="button1" style="font-size: 32px" onclick="Greek()">Ελληνικά</button>
-    <button class="button1" style="font-size: 32px" onclick="Azerbaijan()">Азербајҹан</button>
-    <button class="button1" style="font-size: 32px" onclick="HighMari()">Кырык Мары</button>
-    <button class="button1" style="font-size: 32px" onclick="LowMari()">Олык Марий</button>
-    <button class="button1" style="font-size: 32px" onclick="Udmurt()">Удмурт</button>
-    <button class="button1" style="font-size: 32px" onclick="Burat()">Буряад</button>
-    <button class="button1" style="font-size: 32px" onclick="Mongol()">Монгольский</button>
-    <button class="button1" style="font-size: 32px" onclick="Yakut()">Саха</button>
-    <button class="button1" style="font-size: 32px" onclick="Kazak()">Қазақша</button>
-    <button class="button1" style="font-size: 32px" onclick="Belarussian()">Беларуская</button>
-    <button class="button1" style="font-size: 32px" onclick="Chuvash()">Чӑвашла</button>
-    <button class="button1" style="font-size: 32px" onclick="Chechen()">Нохчийн/Дарган/Авар/Адыгэбзэ/Адыгейский/Гӏалгӏай</button>
-    <button class="button1" style="font-size: 32px" onclick="Osetin()">&#x4d4взаг</button>
-    <button class="button1" style="font-size: 32px" onclick="Tatar()">Татарча</button>
-    <button class="button1" style="font-size: 32px" onclick="MultiLan()">Многоязычная кириллица</button>
-    <button class="button1" style="font-size: 32px" onclick="Bashkir()">Башҡорт</button>
-    <button class="button1" style="font-size: 32px" onclick="Serbian()">Српски</button>
-    <button class="button1" style="font-size: 32px" onclick="Churchslavic()">Церковнославянский</button> 
-    <button class="button1" style="font-size: 32px" onclick="Makedonia()">Македонски</button>
-    <button class="button1" style="font-size: 32px" onclick="Gagauzia()">Гагаузча</button>
-    <button class="button1" style="font-size: 32px" onclick="Moldova()">Молдовеняскэ</button>
-    <button class="button1" style="font-size: 32px" onclick="Doreform()">Дореформенный</button>
-    <button class="button1" style="font-size: 32px" onclick="Ukrainian()">Українська</button> 
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Numbers()">Цифры</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Svito()">Свитошинский</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Russian()">Русский/Мокша/Эрзя</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Greek()">Ελληνικά</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Azerbaijan()">Азербајҹан</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="HighMari()">Кырык Мары</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="LowMari()">Олык Марий</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Udmurt()">Удмурт</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Burat()">Буряад</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Mongol()">Монгольский</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Yakut()">Саха</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Kazak()">Қазақша</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Belarussian()">Беларуская</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Chuvash()">Чӑвашла</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Chechen()">Нохчийн/Дарган/Авар/Адыгэбзэ/Адыгейский/Гӏалгӏай</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Osetin()">&#x4d4взаг</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Tatar()">Татарча</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="MultiLan()">Многоязычная кириллица</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Bashkir()">Башҡорт</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Serbian()">Српски</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Churchslavic()">Церковнославянский</button> 
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Makedonia()">Македонски</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Gagauzia()">Гагаузча</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Moldova()">Молдовеняскэ</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Doreform()">Дореформенный</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Ukrainian()">Українська</button> 
     <a class="button2" style="font-size:80px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="Fonts.zip">СКАЧАТЬ ПОЛНУЮ КОЛЛЕКЦИЮ ШРИФТА</a>
     <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="indexeng.html">ИНГЛИШ ВЕРСИЯ</a>
     <a class="button2" style="font-size:60px;-webkit-text-stroke: 1px rgb(0, 189, 255)" href="help.html">ПОМОЧЬ ПРОЕКТУ!</a>
