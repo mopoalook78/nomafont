@@ -47,9 +47,24 @@
   font-weight: bold;
 }
 @font-face {
+  font-family: Exoneon;
+  src: url("font/Exoneon.otf");
+  font-weight: normal;
+}
+@font-face {
   font-family: Freesetriad Pro;
   src: url("font/Freesetriad-Pro-Black.otf");
   font-weight: bold;
+}
+@font-face {
+  font-family: Freesetriad Pro;
+  src: url("font/Freesetriad-Pro-Black.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Gothamriad Pro;
+  src: url("font/Gothamriad-Pro-Bold.otf");
+  font-weight: normal;
 }
 @font-face {
   font-family: Gothamriad Pro;
@@ -63,7 +78,17 @@
 @font-face {
   font-family: Myriad Text W;
   src: url("font/Myriad-Text-W.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Myriad Text W;
+  src: url("font/Myriad-Text-W.otf");
   font-weight: bold;
+}
+@font-face {
+  font-family: Ridlero;
+  src: url("font/Ridlero.otf");
+  font-weight: normal;
 }
 @font-face {
   font-family: Ridlero;
@@ -73,12 +98,27 @@
 @font-face {
   font-family: Revuerode Gothic;
   src: url("font/Revuerode-Gothic.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Revuerode Gothic;
+  src: url("font/Revuerode-Gothic.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: Tawency Sans;
   src: url("font/Tawency-Sans.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Tawency Sans;
+  src: url("font/Tawency-Sans.ttf");
   font-weight: bold;
+}
+@font-face {
+  font-family: Zedency Sans;
+  src: url("font/Zedency-Sans.otf");
+  font-weight: normal;
 }
 @font-face {
   font-family: Zedency Sans;
@@ -110,7 +150,7 @@ function fontWeight(selectTag) {
       document.getElementById("timer").style.fontSize = listValue;
   }
   </script>
-  <body style="background-color: black;text-align:center;font-feature-settings:'tnum', 'ss01';font-kerning:none;font-size: 280px;animation: color-change 10s linear infinite">  
+  <body style="background-color: black;text-align:center;font-feature-settings:'tnum','ss01';font-kerning:none;font-size: 280px;animation: color-change 10s linear infinite">  
     <select id="input-font" style="font-size: 24px" class="input"
     onchange="changeFontStyle (this);"> 
     <option value="Arial">Arial</option>  
