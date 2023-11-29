@@ -154,6 +154,12 @@ a.button2:hover {
         document.getElementById("output-text").style.fontSize = listValue;
     }
     </script>
+<script>
+    function webkittextStroke(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.webkitTextStroke = listValue;
+    }
+    </script>
     <script>
         function Numbers() {
             document.getElementById("output-text").innerHTML =
@@ -287,7 +293,7 @@ onchange="changeFontStyle (this);">
 <option value="Tisemyriad">Tisemyriad Serif</option>  
 <option value="Zedency Sans">Zedency Sans</option>  
 </select>
-<text style="margin-left:10px">ЦВЕТ ТЕКСТА:</text>
+<text style="margin-left:10px">ЗАЛИВКА ТЕКСТА:</text>
 <select class="solect" id="input-font" class="input"
 onchange="changeColor (this);"> 
 <option value="Black">Чёрный</option>
@@ -341,7 +347,14 @@ onchange="changeBackgroundColor (this);">
 <option value="navy">Тёмно-синий</option>
 <option value="purple">Фиолетовый</option>
 <option value="#936">Фиолетовый 2</option>
-<option value="Fuchsia">Розовый</option>          
+<option value="Fuchsia">Розовый</option>
+</select>
+<text style="margin-left:10px">КОНТУР ТЕКСТА:</text>
+<select class="solect" id="input-font" class="input"
+onchange="webkittextStroke (this);"> 
+<option>0</option>
+<option>1px white</option>
+<option>1px black</option>           
 </select>
 <text style="margin-left:10px">РАЗМЕР ТЕКСТА:</text>
 <select class="solect" onchange="myFunction(this);"> 

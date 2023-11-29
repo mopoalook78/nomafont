@@ -14,15 +14,15 @@
 
 .button1 {
   background-color: black;
-  color: rgb(0,178,255);
+  color: white;
 }
 
 .button1:hover {
-  background-color: rgb(0,189,255);
+  background-color: white;
   color: black;
 }
 select.solect {
-  background-color: rgb(0, 189, 255);
+  background-color: black;
   color: white;
   display: inline-block;
   transition-duration: 0.4s;
@@ -34,13 +34,13 @@ select.solect {
 
 select.solect:hover {
   background-color: white;
-  color: rgb(0, 189, 255);
+  color: black;
   font-family: Gothamriad Pro, 'Segoe UI';
   margin: 6px;
 }
 a.button2{
 border: none;
-color:rgb(0, 189, 255);
+color:white;
 display: inline-block;
 border-radius: 6px;
 text-align: center;
@@ -50,8 +50,8 @@ margin: 0 auto;
 padding: 7px 2%;
 }
 a.button2:hover {
-  background-color: rgb(0, 189, 255);
-  color: white;
+  background-color: white;
+  color: black;
 }
 @keyframes color-change {
   from { color: red; }
@@ -107,10 +107,6 @@ a.button2:hover {
   font-family: Gothamriad Pro;
   src: url("font/Gothamriad-Pro-Bold.otf");
   font-weight: bold;
-}
-@font-face {
-  font-family: Monotype Regorsvia;
-  src: url("font/Monotype-Regorsvia.ttf");
 }
 @font-face {
   font-family: Myriad Text W;
@@ -222,17 +218,24 @@ function fontWeight(selectTag) {
 }
 </script>
 <script> 
+  function fontFeatureSettings(selectTag) {
+      var listValue = selectTag.options[selectTag.selectedIndex].text;
+      document.getElementById("timer").style.fontFeatureSettings = listValue;
+  }
+  </script>
+<script> 
   function fontSize(selectTag) {
       var listValue = selectTag.options[selectTag.selectedIndex].text;
       document.getElementById("timer").style.fontSize = listValue;
   }
   </script>
-  <body style="background-color: black;text-align:center;font-feature-settings:'tnum','ss01';font-kerning:none;font-size: 280px;animation: color-change 10s linear infinite">  
+  <body style="background-color: black;text-align:center;font-kerning:none;font-size: 280px;animation: color-change 10s linear infinite">  
     <select id="input-font" class="solect" style="font-size: 48px" class="input"
     onchange="changeFontStyle (this);"> 
     <option value="Arial">Arial</option>  
     <option value="Arial Black">Arial Black</option>  
     <option value="Avante Gothic">Avante Gothic</option>
+    <option value="Bookman Old Style">Bookman Old Style</option>
     <option value="Bookman Sans">Bookman Sans</option>
     <option value="Century">Century</option>
     <option value="Century Gothic">Century Gothic</option>
@@ -246,7 +249,6 @@ function fontWeight(selectTag) {
     <option value="Helvetica">Helvetica</option>  
     <option value="Inconsolata">Inconsolata</option>
     <option value="Monotype Corsiva">Monotype Corsiva</option>
-    <option value="Monotype Regorsiva">Monotype Regorsiva</option>
     <option value="Montserrat">Montserrat</option>
     <option value="Myriad Text W">Myriad Text W</option>
     <option value="Nunito Sans">Nunito Sans</option>
@@ -260,6 +262,7 @@ function fontWeight(selectTag) {
     <option value="Tahoma">Tahoma</option>  
     <option value="Taporovegro">Taporovegro</option>
     <option value="Tawency Sans">Tawency Sans</option>
+    <option value="Terminal Sans">Terminal Sans</option>
     <option value="Times New Roman">Times New Roman</option>  
     <option value="Tisemyriad">Tisemyriad Serif</option>
     <option value="Verdana">Verdana</option>  
@@ -289,6 +292,20 @@ function fontWeight(selectTag) {
     <option>380px</option> 
     <option>400px</option> 
     </select>
+    <select class="solect" id="input-font" style="font-size: 48px" class="input"
+    onchange="fontFeatureSettings (this);"> 
+    <option>'cv01'</option>
+    <option>'ss01'</option>
+    <option>'ss02'</option>
+    <option>'ss03'</option>
+    <option>'ss04'</option>
+    <option>'ss05'</option>   
+    <option>'ss06'</option> 
+    <option>'ss07'</option>
+    <option>'salt'</option>
+    <option>'tnum', 'cv01'</option>
+    <option>'pnum', 'cv01'</option>    
+    </select>
     <div id='controls'>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px" onclick='startTimer()' id='go'>+</button>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='stopTimer()' id='stop'>-</button>
@@ -296,12 +313,8 @@ function fontWeight(selectTag) {
     </div>
     <div id='timer'>30:30:00:00</div>
     <div id='labels'>
-      <span id='hh'></span>
-      <span id='mm'></span>
-      <span id='ss'></span>
-      <span id='ms'></span>
     </div>
-    <script>
+<script>
 T = {} ;
 T.timerDiv = document.getElementById('timer');
 
@@ -385,7 +398,7 @@ function clearTimer() {
   document.getElementById('go').style.display="inline";
   document.getElementById('clear').style.display="none";
 }
-    </script>
+</script>
 <a class="button2" style="font-family:Gothamriad Pro;font-size:54px" href="index.html">Назад</a>
 <a class="button2" style="font-family:Gothamriad Pro;font-size:54px" href="indexeng.html">Back</a>
 </body>
