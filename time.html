@@ -28,6 +28,7 @@ select.solect {
   transition-duration: 0.4s;
   border: none;
   font-family: Gothamriad Pro, 'Segoe UI';
+  font-weight: bold;
   border-radius:6px;
   margin: 6px;
 }
@@ -239,12 +240,18 @@ function fontWeight(selectTag) {
   }
   </script>
 <script> 
+  function fontKerning(selectTag) {
+      var listValue = selectTag.options[selectTag.selectedIndex].text;
+      document.getElementById("timer").style.fontKerning = listValue;
+  }
+  </script>
+<script> 
   function fontSize(selectTag) {
       var listValue = selectTag.options[selectTag.selectedIndex].text;
       document.getElementById("timer").style.fontSize = listValue;
   }
   </script>
-  <body style="background-color: black;text-align:center;font-kerning:none;font-size: 280px;animation: color-change 10s linear infinite">  
+  <body style="background-color: black;text-align:center;font-size: 280px;animation: color-change 10s linear infinite">  
     <select id="input-font" class="solect" style="font-size: 48px" class="input"
     onchange="changeFontStyle (this);"> 
     <option value="Arial">Arial</option>  
@@ -259,7 +266,7 @@ function fontWeight(selectTag) {
     <option value="Exoneon">Exoneon</option>
     <option value="Freesetriad Pro">Freesetriad Pro Black</option> 
     <option value="Garamond">Garamond</option>  
-    <option value="Georgia Pro">Georgia</option>  
+    <option value="Georgia">Georgia</option>  
     <option value="Gothamriad Pro">Gothamriad Pro</option>
     <option value="Helvetica">Helvetica</option>  
     <option value="Inconsolata">Inconsolata</option>
@@ -306,6 +313,11 @@ function fontWeight(selectTag) {
     <option>350px</option>   
     <option>380px</option> 
     <option>400px</option> 
+    </select>
+    <select class="solect" id="input-font" style="font-size: 48px" class="input"
+    onchange="fontKerning (this);">
+    <option>none</option> 
+    <option>normal</option> 
     </select>
     <select class="solect" id="input-font" style="font-size: 48px" class="input"
     onchange="fontFeatureSettings (this);"> 
