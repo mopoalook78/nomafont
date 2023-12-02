@@ -1,3 +1,4 @@
+<!-- Первый шрифт Freesetriad Pro Black (Freeset Gothic ExtraBold) 7 дек 2022 -->
 <!-- Сайт был сделан 5 авг 2023 -->
 <!-- Редактирование шрифта (7 дек 2022 - 27 декабря 2023) -->
 <!DOCTYPE HTML>
@@ -22,10 +23,6 @@
     src: url('font/Bookman-Sans-Bold.otf');
 }
 @font-face {
-    font-family: Clockirial;
-    src: url('Clockirial.otf');
-}
-@font-face {
     font-family: Exoneon;
     src: url('font/Exoneon.otf');
 }
@@ -35,7 +32,7 @@
 }
 @font-face {
     font-family: Gothamriad Pro;
-    src: url('font/Gothamriad-Pro-Bold.otf');
+    src: url('Gothamriad-Pro-Bold.otf');
     font-weight: normal;
 }
 @font-face {
@@ -126,7 +123,7 @@ a.button2:hover {
   background-color: rgb(0, 189, 255);
   color: white;
 }
-</style>    
+</style> 
 <script> 
     var changeFontStyle = function (font) { 
         document.getElementById( 
@@ -153,14 +150,20 @@ a.button2:hover {
         var listValue = selectTag.options[selectTag.selectedIndex].text;
         document.getElementById("output-text").style.fontSize = listValue;
     }
-    </script>
+</script>
 <script>
     function webkittextStroke(selectTag) {
         var listValue = selectTag.options[selectTag.selectedIndex].text;
         document.getElementById("output-text").style.webkitTextStroke = listValue;
     }
-    </script>
-    <script>
+</script>
+<script> 
+    function fontFeatureSettings(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.fontFeatureSettings = listValue;
+    }
+</script>
+<script>
         function Numbers() {
             document.getElementById("output-text").innerHTML =
                 "0123456789";
@@ -275,24 +278,48 @@ a.button2:hover {
 <text></text>ШРИФТ:</text>
 <select class="solect" id="input-font" class="input"
 onchange="changeFontStyle (this);"> 
-<option value="Avante Gothic">Avante Gothic</option>
-<option value="Bookman Sans">Bookman Sans</option>
-<option value="Clockirial">Clockirial</option>
-<option value="'Exo 2'">Exo 2</option>
-<option value="Exoneon">Exoneon</option>
-<option value="Freesetriad Pro Block">Freesetriad Pro Black</option> 
-<option value="Gothamriad Pro">Gothamriad Pro</option>
-<option value="Inconsolata">Inconsolata</option>
-<option value="Myriad Text W">Myriad Text W</option>
-<option value="Open Sans">Open Sans</option>
-<option value="Revuerode Gothic">Revuerode Gothic</option>
-<option value="Slavic New Style">Slavic New Style</option>
-<option value="Stereonical">Stereonical</option>
-<option value="Taporovegro">Taporovegro</option>
-<option value="Tawency Sans">Tawency Sans</option>
-<option value="Tisemyriad">Tisemyriad Serif</option>  
-<option value="Zedency Sans">Zedency Sans</option>  
+<option value="Avante Gothic">Без засечек №1</option>
+<option value="Bookman Sans">Без засечек №2</option>
+<option value="Exoneon">Без засечек №3</option>
+<option value="Freesetriad Pro Block">Без засечек №4</option> 
+<option value="Myriad Text W">Без засечек №5</option>
+<option value="Gothamriad Pro">Без засечек №6</option>
+<option value="Revuerode Gothic">Без засечек №7</option>
+<option value="Stereonical">Без засечек №8</option>
+<option value="Tawency Sans">Без засечек №9</option>
+<option value="Zedency Sans">Без засечек №10</option> 
+<option value="Terminal Sans">Пиксельный</option>
+<option value="Taporovegro">Готический</option>
+<option value="Tisemyriad">Академический</option>  
+<option value="Slavic New Style">Славянский</option>
 </select>
+<text></text>OPENTYPE НАБОРЫ:</text>
+<select class="solect" id="input-font" class="input"
+onchange="fontFeatureSettings (this);"> 
+<option>'none'</option>
+<option>'cv01'</option>
+<option>'cv02'</option>
+<option>'cv03'</option>
+<option>'cv03', 'cv06'</option>
+<option>'cv04'</option>
+<option>'cv58'</option>
+<option>'cv80'</option>
+<option>'ss01'</option>
+<option>'ss01', 'ss03', 'ss04'</option>
+<option>'ss02'</option>
+<option>'ss03'</option>
+<option>'ss03', 'ss04'</option>
+<option>'ss04'</option>
+<option>'ss05'</option>   
+<option>'ss06'</option> 
+<option>'ss07'</option>
+<option>'salt'</option>
+<option>'tnum'</option>
+<option>'tnum', 'cv01'</option>
+<option>'pnum'</option>
+<option>'pnum', 'cv01'</option>
+</select>
+</br>
 <text style="margin-left:10px">ЗАЛИВКА ТЕКСТА:</text>
 <select class="solect" id="input-font" class="input"
 onchange="changeColor (this);"> 
@@ -321,6 +348,31 @@ onchange="changeColor (this);">
 <option value="#936">Фиолетовый 2</option>
 <option value="Fuchsia">Розовый</option>      
 </select>
+<text style="margin-left:10px">РАЗМЕР ТЕКСТА:</text>
+<select class="solect" onchange="myFunction(this);"> 
+<option>1px</option>
+<option>2px</option>
+<option>3px</option>
+<option>4px</option>
+<option>5px</option>
+<option>6px</option> 
+<option>7px</option> 
+<option>8px</option> 
+<option>9px</option> 
+<option>10px</option> 
+<option>11px</option>
+<option>12px</option>
+<option>14px</option> 
+<option>16px</option> 
+<option>18px</option>  
+<option>20px</option>
+<option>50px</option>  
+<option>100px</option>
+<option>130px</option>
+<option>150px</option>
+<option>200px</option>
+</select>
+</br>
 <text style="margin-left:10px">ФОН ТЕКСТА:</text>
 <select class="solect" id="input-font" class="input"
 onchange="changeBackgroundColor (this);"> 
@@ -353,32 +405,14 @@ onchange="changeBackgroundColor (this);">
 <select class="solect" id="input-font" class="input"
 onchange="webkittextStroke (this);"> 
 <option>0</option>
+<option>0.25px white</option>
+<option>0.25px black</option>
+<option>0.5px white</option>
+<option>0.5px black</option>
+<option>0.75px white</option>
+<option>0.75px black</option>
 <option>1px white</option>
 <option>1px black</option>           
-</select>
-<text style="margin-left:10px">РАЗМЕР ТЕКСТА:</text>
-<select class="solect" onchange="myFunction(this);"> 
-<option>1px</option>
-<option>2px</option>
-<option>3px</option>
-<option>4px</option>
-<option>5px</option>
-<option>6px</option> 
-<option>7px</option> 
-<option>8px</option> 
-<option>9px</option> 
-<option>10px</option> 
-<option>11px</option>
-<option>12px</option>
-<option>14px</option> 
-<option>16px</option> 
-<option>18px</option>  
-<option>20px</option>
-<option>50px</option>  
-<option>100px</option>
-<option>130px</option>
-<option>150px</option>
-<option>200px</option>
 </select>
 <p id="output-text" contenteditable="true">0123456789</p>
     <text style="font-size: 108px;text-align: center">ЯЗЫК ТЕКСТА:</text>
