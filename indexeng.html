@@ -1,95 +1,457 @@
-<!Doctype HTML>
+<!-- Edition font (7 dec 2022 - 27 dec 2023) -->
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <style>
-      @font-face { font-family: Gotham; font-style: Bold; src: url('font/Gotham Text/Gotham-Bold.ttf'); }
-    </style>
-    <style>
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
+<head>
+<title>NOMAFONT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="Nomaicon.svg"/>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+</style>
+<style>
+@font-face {
+    font-family: Avante Gothic;
+    src: url('font/Avante-Gothic-Bold.otf');
+}
+@font-face {
+    font-family: Bookman Sans;
+    src: url('font/Bookman-Sans-Bold.otf');
+}
+@font-face {
+    font-family: Exoneon;
+    src: url('font/Exoneon.otf');
+}
+@font-face {
+    font-family: Freesetriad Pro Black;
+    font-weight: normal;
+    src: url('font/Freesetriad-Pro-Black.otf');
+}
+@font-face {
+    font-family: Freesetriad Pro Black;
+    font-weight: bold;
+    src: url('font/Freesetriad-Pro-Black.otf');
+}
+@font-face {
+    font-family: Gothamriad Pro;
+    font-weight: normal;
+    src: url('font/Gothamriad-Pro-Bold.otf');
+}
+@font-face {
+    font-family: Gothamriad Pro;
+    font-weight: bold;
+    src: url('font/Gothamriad-Pro-Bold.otf');
+}    
+@font-face {
+    font-family: Myriad Text W;
+    font-weight: bold;
+    src: url('font/Myriad-Text-W.otf');
+}
+@font-face {
+    font-family: Myriad Text W;
+    font-weight: normal;
+    src: url('font/Myriad-Text-W.otf');
+}
+@font-face {
+    font-family: Revuerode Gothic;
+    src: url('font/Revuerode-Gothic.otf');
+}
+@font-face {
+    font-family: Ridlero;
+    font-weight: bold;
+    src: url('font/Ridlero.otf');
+}
+@font-face {
+    font-family: Ridlero;
+    font-weight: normal;
+    src: url('font/Ridlero.otf');
+}
+@font-face {
+    font-family: Slavic New Style;
+    src: url('font/Slavic-New-Style.otf');
+}
+@font-face {
+    font-family: Stereonical;
+    src: url('font/Stereonical.otf');
+}
+@font-face {
+    font-family: Taporovegro;
+    src: url('font/Taporovegro-Serif.otf');
+}
+@font-face {
+    font-family: Tawency Sans;
+    font-weight: normal;
+    src: url('font/Tawency-Sans.ttf');
+}
+@font-face {
+    font-family: Tawency Sans;
+    font-weight: bold;
+    src: url('font/Tawency-Sans.ttf');
+}
+@font-face {
+    font-family: Terminal Sans;
+    src: url('font/Terminal-Sans.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: Terminal Sans;
+    src: url('font/Terminal-Sans.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Tisemyriad;
+    src: url('font/Tisemyriad-Serif.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: Tisemyriad;
+    src: url('font/Tisemyriad-Serif.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Zedency Sans;
+    font-weight: normal;
+    src: url('font/Zedency-Sans.otf');
+}
+@font-face {
+    font-family: Zedency Sans;
+    font-weight: bold;
+    src: url('font/Zedency-Sans.otf');
+}
+select.solect {
+  background-color: rgb(189, 206, 213);
+  color: black;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
-  cursor: pointer;
+  border: none;
+  font-family: Gothamriad Pro, 'Segoe UI';
+  font-size: 30px;
+  font-weight: bold;
+  border-radius:4px;
+  margin: 6px;
+}
+
+select.solect:hover {
+  font-family: Gothamriad Pro, 'Segoe UI';
+  font-weight: bold;
+  margin: 6px;
 }
 
 .button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
+  background-color: rgb(0, 189, 255);
+  color: white;
+  display: inline-block;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius:6px;
+  margin: 6px;
 }
 
 .button1:hover {
-  background-color: #4CAF50;
+  background-color: white;
+  color: rgb(0, 189, 255);
+  margin: 6px;
+}
+    a.button2
+{
+border: none;
+color: rgb(0, 189, 255);
+display: inline-block;
+  border-radius:6px;
+text-align: center;
+text-decoration: none;
+transition-duration: 0.4s;
+margin: 0 auto;
+padding: 7px 2%;
+}
+a.button2:hover {
+  background-color: rgb(0, 189, 255);
   color: white;
 }
-</style>
-    <link rel="icon" href="Icon Font.ico">
-    <meta charset="UTF-8">
-    <title>Nomafont Fonts</title>
-  </head>
-<body>
-<p align="center"><img src="Shrifty.png"></p>
-<p style="font-family:Gotham;font-size:102px;text-align:center">NOMAFONT FONTS</p>
-<p align="center"><img src="ImageFont/AvantGarde.png"></p>
-<a href="enHTMLFONT/AvanteGothic.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Avenir Next W.png"></p>
-<a href="enHTMLFONT/AvenirNextW.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Avetger Gothic.png"></p>
-<p align="center"><img src="ImageFont/Bookman New Serif.png"></p>
-<a href="enHTMLFONT/BookmanNewSerif.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/BookmanSans.png"></p>
-<a href="enHTMLFONT/BookmanSans.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Europen.png"></p>
-<a href="enHTMLFONT/Europen.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Eurostyle.png"></p>
-<a href="enHTMLFONT/EurostyleNext.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Exo3.png"></p>  
-<p align="center"><img src="ImageFont/Freesetriad.png"></p>
-<a href="enHTMLFONT/Freesetriad.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/FrutigerNextP.png"></p>
-<a href="enHTMLFONT/FrutigerNextP.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Gotham Text.png"></p>
-<a href="enHTMLFONT/GothamText.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/GothamTextSemiCond.png"></p>
-<a href="enHTMLFONT/GothamTextSemiCond.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/GothamTextCond.png"></p>
-<a href="enHTMLFONT/GothamTextCond.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Gothamriad.png"></p>
-<a href="enHTMLFONT/GothamriadPro.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Helvetriad.png"></p>
-<p align="center"><img src="ImageFont/MonorialMonospace.png"></p>
-<a href="enHTMLFONT/MonorialMonospace.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Monotype.png"></p>
-<a href="enHTMLFONT/Monotype.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Revue.png"></p>
-<a href="enHTMLFONT/Revue.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Romanus.png"></p>
-<a href="enHTMLFONT/Romanus.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Slavic New Style.png"></p></a>
-<a href="enHTMLFONT/SlavicNewStyle.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Taporovegro.png"></p>
-<a href="enHTMLFONT/Taporovegro.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Tawency.png"></p>
-<a href="enHTMLFONT/Tawency.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Tisemyriad.png"></p>
-<a href="enHTMLFONT/Tisemyriad.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/ZawencySans.png"></p>
-<a href="enHTMLFONT/ZawendySans.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<p align="center"><img src="ImageFont/Zedency.png"></p>
-<a href="enHTMLFONT/Zedency.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:36px;text-align:center">Preview Font</button></p></a>
-<a href="Fonts.zip"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:80px;text-align:center">DOWNLOAD FULL COLLECTION FONTS</button></p></a>
-<a href="index.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:48px;text-align:center">RUSSIAN VERSION</button></p></a>
-<a href="helpeng.html"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:60px;text-align:center">HELP THE PROJECT!</button></p></a>
-<a href="https://fontdrop.info/"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:70px;text-align:center">CHECK THE FONT</button></p></a>
-<p style="font-family:Gotham;font-size:60px;text-align:center">
-  © 2023 NOMAFONT
+</style> 
+<script> 
+    var changeFontStyle = function (font) { 
+        document.getElementById( 
+            "output-text").style.fontFamily 
+                    = font.value; 
+    } 
+</script>
+<script> 
+    var changeColor = function (color) { 
+        document.getElementById( 
+            "output-text").style.color 
+                    = color.value; 
+    } 
+</script>
+<script> 
+    var changeBackgroundColor = function (background) { 
+        document.getElementById( 
+            "output-text").style.background 
+                    = background.value; 
+    } 
+</script>
+<script>
+    function myFunction(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.fontSize = listValue;
+    }
+</script>
+<script>
+    function webkittextStroke(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.webkitTextStroke = listValue;
+    }
+</script>
+<script> 
+    function fontFeatureSettings(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.fontFeatureSettings = listValue;
+    }
+</script>
+<script>
+    function fontStyle(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.fontStyle = listValue;
+    }
+</script>
+<script> 
+    function fontWeight(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("output-text").style.fontWeight = listValue;
+    }
+</script>
+<script>
+        function Numbers() {
+            document.getElementById("output-text").innerHTML =
+                "0123456789";
+        }
+        function Windows1250() {
+            document.getElementById("output-text").innerHTML =
+                " !&#34#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ €‚„†‡‰Š‹ŚŤŽŹ‘’“”•–—™š›śťžź ˇ˘Ł¤Ą¦§¨©Ş«¬­®Ż°±˛ł´µ¶·¸ąş»Ľ˝ľżŔÁÂĂÄĹĆÇČÉĘËĚÍÎĎĐŃŇÓÔŐÖ×ŘŮÚŰÜÝ Ţßŕáâăäĺćçčéęëěíîďđńňóôőö÷řůúűüýţ˙";
+        }
+        function Windows1252() {
+            document.getElementById("output-text").innerHTML =
+                " !&#34#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ €‚„†‡‰Š‹ŒŽ‘’“”•–—™š›œžŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝ Þßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ";
+        }
+        function Windows1254() {
+            document.getElementById("output-text").innerHTML =
+                " !&#34#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ €‚„†‡‰Š‹Œ‘’“”•–—™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİ Şßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışÿ";
+        }
+        function Windows1257() {
+            document.getElementById("output-text").innerHTML =
+                " !&#34#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ €‚„†‡‰‹¨ˇ¸‘’“”•–—™›¯˛ ¢£¤¦§Ø©Ŗ«¬­®Æ°±²³´µ¶·ø¹ŗ»¼½¾æĄĮĀĆÄÅĘĒČÉŹĖĢĶĪĻŠŃŅÓŌÕÖ×ŲŁŚŪÜŻ Žßąįāćäåęēčéźėģķīļšńņóōõö÷ųłśūüżž˙";
+        }
+        function Azerbaijan() {
+            document.getElementById("output-text").innerHTML =
+                "Aa Bb Cc &#xC7;&#xE7; Dd Ee &#x18F;&#x259; Ff Gg Hh Xx Ii &#x130;&#x131; Jj Kk Qq Ll Mm Nn Oo &#xD6;&#xF6; Pp Rr Ss Tt Uu &#xDC;&#xFC; Vv Yy Zz";
+        }
+        function LatinExtended() {
+            document.getElementById("output-text").innerHTML =
+                "&#x1F8;&#x1F9; &#x1D1;&#x1D2; &#x1D3;&#x1D4; &#x1A0;&#x1A1; &#x1AF;&#x1B0;";
+        }
+        function Multilingual() {
+            document.getElementById("output-text").innerHTML =
+                "A&#x30F;a&#x30F; B&#x308;b&#x308; C&#x30B;c&#x30B; D&#x30F;d&#x30F; E&#x30B;e&#x30B; F&#x307;&#x308;f&#x307;&#x308; G&#x30B;g&#x30B; H&#x30B;h&#x30B; I&#x30B;i&#x30B; J&#x30A;j&#x30A; K&#x30A;k&#x30A; L&#x30B;l&#x30B; M&#x308;m&#x308; N&#x30B;n&#x30B; O&#x30B;o&#x30B; P&#x308;p&#x308; Q&#x308;q&#x308; R&#x30B;r&#x30B; S&#x30B;s&#x30B; T&#x30B;t&#x30B; U&#x30B;u&#x30B; V&#x30B;v&#x30B; W&#x30B;w&#x30B; X&#x30B;x&#x30B; Y&#x30B;y&#x30B; Z&#x30B;z&#x30B;";
+        }
+    </script>
+<header>
+<body style="text-align: center;background-color: black;color:white;font-size: 30px;font-family: Gothamriad Pro">
+</br>
+   <img src="Nomafont.svg" style="width:50cm"/>
+</br>
+<text>FONT:</text>
+<select class="solect" id="input-font" class="input"
+onchange="changeFontStyle (this);"> 
+<option value="Arial">Arial</option>
+<option value="Arial Black">Arial Black</option>
+<option value="Avante Gothic">Avante Gothic</option>
+<option value="Bookman Sans">Bookman Sans</option>
+<option value="Comic Sans MS">Comic Sans MS</option>
+<option value="Exoneon">Exoneon</option>
+<option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+<option value="Freesetriad Pro Black">Freesetriad Pro Black</option>
+<!-- Первый шрифт Freesetriad Pro Black (Freeset Gothic ExtraBold) 7 дек 2022 -->
+<option value="Gabriola">Gabriola</option>
+<option value="Garamond">Garamond</option>
+<option value="Georgia">Georgia</option>
+<option value="Gothamriad Pro">Gothamriad Pro</option>
+<option value="Helvetica">Helvetica</option>
+<option value="Lucida Console">Lucida Console</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Myriad Text W">Myriad Text W</option>
+<option value="Noto Sans">Noto Sans</option>
+<option value="Open Sans">Open Sans</option>
+<option value="Revuerode Gothic">Revuerode Gothic</option>
+<option value="Ridlero">Ridlero</option>
+<option value="Segoe UI">Segoe UI</option>
+<option value="Slavic New Style">Slavic New Style</option>
+<option value="Stereonical">Stereonical</option>
+<option value="Tahoma">Tahoma</option>
+<option value="Taporovegro">Taporovegro Serif</option>
+<option value="Tawency Sans">Tawency Sans</option>
+<option value="Terminal Sans">Terminal Sans</option>
+<option value="Times New Roman">Times New Roman</option>
+<option value="Tisemyriad">Tisemyriad</option>
+<option value="Trebuchet MS">Trebuchet MS</option>
+<option value="Verdana">Verdana</option>
+<option value="Zedency Sans">Zedency Sans</option> 
+</select>
+<text></text>OPENTYPE FEATURES:</text>
+<select class="solect" id="input-font" class="input"
+onchange="fontFeatureSettings (this);"> 
+<option>'none'</option>
+<option>'cv01'</option>
+<option>'cv02'</option>
+<option>'cv03'</option>
+<option>'cv03', 'ss02'</option>
+<option>'cv03', 'cv80', 'ss02'</option>
+<option>'cv03', 'cv90', 'ss02'</option>
+<option>'cv03', 'cv80', 'cv90', 'ss02'</option>
+<option>'cv04'</option>
+<option>'cv58'</option>
+<option>'cv80'</option>
+<option>'cv90'</option>
+<option>'lnum'</option>
+<option>'pnum'</option>
+<option>'pnum', 'cv01'</option>
+<option>'salt'</option>
+<option>'ss01'</option>
+<option>'ss01', 'ss03', 'ss04'</option>
+<option>'ss02', 'ss03', 'ss04'</option>
+<option>'ss02'</option>
+<option>'ss03'</option>
+<option>'ss03', 'ss04'</option>
+<option>'ss04'</option>
+<option>'ss05'</option>   
+<option>'ss06'</option> 
+<option>'ss07'</option>
+<option>'tnum'</option>
+<option>'tnum', 'cv01'</option>
+<option>'zero'</option>
+</select>
+<text style="margin-left:10px">COLOR TEXT:</text>
+<select class="solect" id="input-font" class="input"
+onchange="changeColor (this);"> 
+<option value="Black">Black</option>
+<option value="White">White</option> 
+<option value="Gray">Gray</option> 
+<option value="Silver">Silver</option>  
+<option value="Maroon">Maroon</option>
+<option value="olive">Olive</option>   
+<option value="Red">Red</option>
+<option value="#C00">Red 2</option>  
+<option value="#FC0">Gold</option>
+<option value="yellow">Yellow</option>
+<option value="lime">Green</option>
+<option value="green">Dark green</option>
+<option value="cyan">Cyan</option>
+<option value="rgb(0, 189, 255)">Teal</option>     
+<option value="Teal">Teal 2</option>
+<option value="#0CF">Light Blue </option>              
+<option value="blue">Blue</option>
+<option value="#00C">Blue 2</option>
+<option value="navy">Navy</option>
+<option value="purple">Purple</option>
+<option value="Fuchsia">Pink</option>      
+</select>
+</br>
+<text style="margin-left:10px">SIZE TEXT:</text>
+<select class="solect" onchange="myFunction(this);"> 
+<option>1px</option>
+<option>2px</option>
+<option>3px</option>
+<option>4px</option>
+<option>5px</option>
+<option>6px</option> 
+<option>7px</option> 
+<option>8px</option> 
+<option>9px</option> 
+<option>10px</option> 
+<option>11px</option>
+<option>12px</option>
+<option>14px</option> 
+<option>16px</option> 
+<option>18px</option>  
+<option>20px</option>
+<option>50px</option>  
+<option>100px</option>
+<option>130px</option>
+<option>150px</option>
+<option>200px</option>
+</select>
+<text style="margin-left:10px">BACKGROUND TEXT:</text>
+<select class="solect" id="input-font" class="input"
+onchange="changeBackgroundColor (this);"> 
+<option value="Black">Black</option>
+<option value="White">White</option> 
+</select>
+<text style="margin-left:10px">STROKE TEXT:</text>
+<select class="solect" id="input-font" class="input"
+onchange="webkittextStroke (this);"> 
+<option>0</option>
+<option>0.25px white</option>
+<option>0.25px black</option>
+<option>0.5px white</option>
+<option>0.5px black</option>
+<option>0.75px white</option>
+<option>0.75px black</option>
+<option>1px white</option>
+<option>1px black</option>           
+</select>
+</br>
+<text style="margin-left:10px">WEIGHT TEXT:</text>
+<select class="solect" id="input-font" class="input"
+onchange="fontWeight (this);"> 
+<option>100</option>
+<option>200</option>
+<option>300</option>
+<option>Normal</option>
+<option>500</option>
+<option>600</option>
+<option>Bold</option>
+<option>800</option>
+<option>900</option>
+<option>1000</option>
+</select>
+<text style="margin-left:10px">ITALIC:</text>
+<select class="solect" id="input-font" class="input"
+onchange="fontStyle (this);"> 
+<option>normal</option>
+<option>italic</option>         
+</select>
+<p style="margin-top: 10px;margin-bottom: 10px" id="output-text" contenteditable="true">0123456789</p>
+    <text style="font-size: 108px;text-align: center">LANGUAGE OF TEXT:</text>
+    <br>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Numbers()">Numbers</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Windows1250()">Windows 1250</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Windows1252()">Windows 1252</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Windows1252()">Windows 1254</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Windows1252()">Windows 1257</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Azerbaijan()">Azərbaycan</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="LatinExtended()">Latin Extended</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Multilingual()">Multilingual</button>
+</br>
+    <a class="button2" style="font-size:78px" href="Fonts.zip">DOWNLOAD FULL COLLECTION FONTS</a>
+    <a class="button2" style="font-size:60px" href="index.html">RUSSIAN VERSION</a>
+    <a class="button2" style="font-size:60px" href="helpeng.html">HELP A PROJECT!</a>
+    <a class="button2" style="font-size:60px" href="https://fontdrop.info/">CHECK FONT</a>
+    <a class="button2" style="font-size:60px" href="https://nomafont78.fandom.com/ru/wiki/Nomafont78_%D0%92%D0%B8%D0%BA%D0%B8">FANDOM WIKIPEDIA</a>
+    <a class="button2" style="font-size:60px" href="https://www.fontconverter.io/en/otf-to-svg">CONVERT OTF FONT INTO SVG</a>
+    <a class="button2" style="font-size:60px" href="https://www.fontconverter.io/en/ttf-to-svg">CONVERT TTF FONT INTO SVG</a>
+    <a class="button2" style="font-size:60px" href="time.html">TIME</a>
+    </br>
+    <font style="font-size:70px;text-align:center">PROGRAM FOR DRAWINF:</font>
+    </br>
+    <a class="button2" style="font-size:50px" href="https://inkscape.org/ru/">INKSCAPE</a>
+    <a class="button2" style="font-size:50px" href="https://www.photopea.com/">PHOTOPEA</a>
+    <a class="button2" style="font-size:50px" href="https://editsvgcode.com/">SVG</a>
+    <a class="button2" style="font-size:50px" href="https://yqnn.github.io/svg-path-editor//">SVG PATH EDITOR</a>
+    <br/>
+    <p style="font-size:60px;text-align:center">
+  © 2023 - 2024 NOMAFONT
+<!-- This site was created 5 aug 2023 -->
 </p>
 </body>
 </html>
