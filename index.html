@@ -249,6 +249,10 @@ a.button2:hover {
             document.getElementById("output-text").innerHTML =
                 "Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Йй Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя";
         }
+        function Acuterussian() {
+            document.getElementById("output-text").innerHTML =
+                "А&#x0308;а&#x0308; Е&#x0308;е&#x0308; И&#x0308;и&#x0308; О&#x0308;о&#x0308; У&#x0308;у&#x0308; Ы&#x0308;ы&#x0308; Э&#x0308;э&#x0308; Ю&#x0308;ю&#x0308; Я&#x0308;я&#x0308;";
+        }
         function Greek() {
             document.getElementById("output-text").innerHTML =
                 "Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσ ς Ττ Υυ Φφ Χχ Ψψ Ωω Ϊϊ Ϋϋ ΆΈΉΊΌΎΏάέήίΐόύώ";
@@ -360,11 +364,11 @@ onchange="changeFontStyle (this);">
 <option value="Gothamriad Pro">Без засечек №6</option>
 <option value="Revuerode Gothic">Без засечек №7</option>
 <option value="Stereonical">Без засечек №8</option>
-<option value="Tawency Sans">Без засечек №9</option>
-<option value="Zedency Sans">Без засечек №10</option> 
 <option value="Taporovegro">Готический</option>
 <option value="Terminal Sans">Пиксельный</option>
 <option value="Slavic New Style">Славянский</option>
+<option value="Tawency Sans">Техно №19082023</option>
+<option value="Zedency Sans">Техно №27072023</option> 
 </select>
 <text></text>OPENTYPE НАБОРЫ:</text>
 <select class="solect" id="input-font" class="input"
@@ -493,6 +497,7 @@ onchange="fontStyle (this);">
     <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Numbers()">Цифры</button>
     <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Svito()">Свитошинский</button>
     <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Russian()">Русский/Мокша/Эрзя</button>
+    <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Acuterussian()">Ударение русского языка</button>
     <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Windows1251()">Windows 1251</button>
     <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Greek()">Ελληνικά</button>
     <button class="button1" style="font-size: 32px;font-family: Gothamriad Pro" onclick="Windows1253()">Windows 1253</button>
