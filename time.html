@@ -230,18 +230,12 @@ function fontWeight(selectTag) {
   }
   </script>
 <script> 
-  function fontKerning(selectTag) {
-      var listValue = selectTag.options[selectTag.selectedIndex].text;
-      document.getElementById("timer").style.fontKerning = listValue;
-  }
-  </script>
-<script> 
   function fontSize(selectTag) {
       var listValue = selectTag.options[selectTag.selectedIndex].text;
       document.getElementById("timer").style.fontSize = listValue;
   }
   </script>
-  <body style="background-color: black;text-align:center;font-size: 280px;animation: color-change 10s linear infinite">  
+  <body style="background-color: black;text-align:center;font-size: 280px;animation: color-change 10s linear infinite;font-kerning: none">  
     <select id="input-font" class="solect" style="font-size: 48px" class="input"
     onchange="changeFontStyle (this);"> 
     <option value="Arial">Arial</option>  
@@ -312,11 +306,6 @@ function fontWeight(selectTag) {
     <option>400px</option> 
     </select>
     <select class="solect" id="input-font" style="font-size: 48px" class="input"
-    onchange="fontKerning (this);">
-    <option>none</option> 
-    <option>normal</option> 
-    </select>
-    <select class="solect" id="input-font" style="font-size: 48px" class="input"
     onchange="fontFeatureSettings (this);"> 
     <option>'none'</option>
     <option>'cv01'</option>
@@ -339,7 +328,7 @@ function fontWeight(selectTag) {
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='stopTimer()' id='stop'>-</button>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='clearTimer()' id='clear'>*</button>
     </div>
-    <div id='timer'>30:30:00:00</div>
+    <div id='timer'>30:30:00:00 20:20:00:0</div>
     <div id='labels'>
     </div>
 <script>
@@ -348,7 +337,7 @@ T.timerDiv = document.getElementById('timer');
 
 function displayTimer() {
 
-  var hours='30', minutes='30', seconds='00', miliseconds='00'
+  var hours='30', minutes='30', seconds='00', miliseconds='00', venir=' ', vehours='20', veminutes='20', veseconds='00', vemiliseconds='0'
   time = '',
   timeNow = new Date().getTime();
 
@@ -383,10 +372,50 @@ function displayTimer() {
     }
   }
 
+  if(T.difference > 10) {
+    vemiliseconds = Math.floor((T.difference % 1000) / 10);
+    if(vemiliseconds < 10) {
+      vemiliseconds = '0';
+    }
+  }
+
+  if(T.difference > 1000) {
+    veseconds = Math.floor((T.difference % 100000) / 1000);
+    if(veseconds < 10) {
+      veseconds = '0'+String(veseconds);
+    }
+  }
+
+  if(T.difference > 100000) {
+    veminutes = Math.floor((T.difference % 10000000) / 100000);
+    if(veminutes < 10) {
+      veminutes = '0'+String(veminutes);
+    }
+  }
+
+  if(T.difference > 10000000) {
+    vehours = Math.floor((T.difference % 100000000) / 10000000);
+    if(vehours < 10) {
+      vehours = '0'+String(vehours);
+    }
+  }
+
+  if(T.difference > 10000000) {
+    venir = Math.floor((T.difference % 100000000) / 10000000);
+    if(vehours < 10) {
+      venir = '0'+String(venir);
+    }
+  }
+
   time  =  hours   + ':'
   time += minutes + ':'
   time += seconds + ':'
   time += miliseconds + ''
+  time += venir  + ' '
+  time += vehours  + ':'
+  time += veminutes + ':'
+  time += veseconds + ':'
+  time += vemiliseconds + ''
 
   T.timerDiv.innerHTML = time;
 }
@@ -419,7 +448,7 @@ function stopTimer() {
 
 function clearTimer() {
   clearInterval(T.timerInterval);
-  T.timerDiv.innerHTML = "30:30:00:00";
+  T.timerDiv.innerHTML = "30:30:00:00 20:20:00:0";
   T.difference = 0;
 
   document.getElementById('stop').style.display="none";
