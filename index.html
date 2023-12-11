@@ -112,7 +112,7 @@
     font-weight: normal;
 }
 @font-face {
-    font-family: Tisemyriad;
+    font-family: Академический 2;
     src: url('font/Tisemyriad-Serif.otf');
     font-weight: bold;
 }
@@ -361,8 +361,9 @@ a.button2:hover {
 </br>
 <text>ШРИФТ:</text>
 <select class="solect" id="input-font" class="input"
-onchange="changeFontStyle (this);"> 
-<option value="Tisemyriad">Академический</option>  
+onchange="changeFontStyle (this);">
+<option value="Академический">Академический</option>  
+<option value="Академический 2">Академический 2</option>  
 <option value="Avante Gothic">Без засечек №1</option>
 <option value="Bookman Sans">Без засечек №2</option>
 <option value="Exoneon">Без засечек №3</option>
@@ -379,7 +380,7 @@ onchange="changeFontStyle (this);">
 <option value="Zedency Sans">Техно №27072023</option> 
 </select>
 <text></text>OPENTYPE НАБОРЫ:</text>
-<select class="solect" id="input-font" class="input"
+<select class="solect" style="width:120px" id="input-font" class="input"
 onchange="fontFeatureSettings (this);"> 
 <option>'none'</option>
 <option>'cv01'</option>
