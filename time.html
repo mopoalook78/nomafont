@@ -246,14 +246,9 @@ function fontWeight(selectTag) {
     <option value='Calibri'>Calibri</option>
     <option value='Cambria'>Cambria</option>
     <option value='Candara'>Candara</option>
-    <option value='Clock 2021'>Clock 2021</option>
-    <option value='Clock 2021 Fixed'>Clock 2021 Fixed</option>
     <option value='Clockirial'>Clockirial</option>
     <option value='Constantia'>Constantia</option>
     <option value='Corbel'>Corbel</option>
-    <option value='Droid Mono'>Droid Mono</option>
-    <option value='Droid Sans'>Droid Sans</option>
-    <option value='Droid Sans'>Droid Serif</option>
     <option value="'Exo 2'">Exo 2</option>
     <option value="Exoneon">Exoneon</option>
     <option value="Freesetriad Pro">Freesetriad Pro Black</option> 
@@ -269,7 +264,7 @@ function fontWeight(selectTag) {
     <option value="Montserrat">Montserrat</option>
     <option value="Myriad Text W">Myriad Text W</option>
     <option value="Noto Sans">Noto Sans</option>    
-    <option value="Noto Serif">Noto Sans</option>    
+    <option value="Noto Serif">Noto Serif</option>    
     <option value="Nunito Sans">Nunito Sans</option>
     <option value="Open Sans">Open Sans</option> 
     <option value="Palatino Linotype">Palatino Linotype</option>
@@ -335,7 +330,7 @@ function fontWeight(selectTag) {
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='stopTimer()' id='stop'>-</button>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='clearTimer()' id='clear'>*</button>
     </div>
-    <div id='timer'>30:30:00:00 20:20:00:0 00:00:00:00</div>
+    <div id='timer'>30:30:00:00 20:20:00:00 00:00:00:00</div>
     <div id='labels'>
     </div>
 <script>
@@ -344,8 +339,8 @@ T.timerDiv = document.getElementById('timer');
 
 function displayTimer() {
 
-  var hours='30', minutes='30', seconds='00', miliseconds='00', venir=' ', vehours='20', veminutes='20', veseconds='00', vemiliseconds='0',
-  vthours='00', vtminutes='00', vtseconds='00', vtmiliseconds='0'
+  var hours='30', minutes='30', seconds='00', miliseconds='00', venir=' ', vehours='20', veminutes='20', veseconds='00', vemiliseconds='00',
+  vthours='00', vtminutes='00', vtseconds='00', vtmiliseconds='00'
   time = '',
   timeNow = new Date().getTime();
 
@@ -367,23 +362,23 @@ function displayTimer() {
   }
 
   if(T.difference > 100000) {
-    minutes = Math.floor((T.difference % 10000000) / 100000);
+    minutes = Math.floor((T.difference % 1000000) / 100000);
     if(minutes < 10) {
       minutes = '3'+String(minutes);
     }
   }
 
   if(T.difference > 10000000) {
-    hours = Math.floor((T.difference % 100000000) / 10000000);
+    hours = Math.floor((T.difference % 10000000) / 10000000);
     if(hours < 10) {
-      hours = '0'+String(hours);
+      hours = '3'+String(hours);
     }
   }
 
-  if(T.difference > 10) {
-    vemiliseconds = Math.floor((T.difference % 1000) / 10);
+  if(T.difference > 100) {
+    vemiliseconds = Math.floor((T.difference % 1000) / 100);
     if(vemiliseconds < 10) {
-      vemiliseconds = '0';
+      vemiliseconds = '0'+vemiliseconds;
     }
   }
 
@@ -395,16 +390,16 @@ function displayTimer() {
   }
 
   if(T.difference > 100000) {
-    veminutes = Math.floor((T.difference % 10000000) / 100000);
+    veminutes = Math.floor((T.difference % 1000000) / 100000);
     if(veminutes < 10) {
-      veminutes = '0'+String(veminutes);
+      veminutes = '2'+String(veminutes);
     }
   }
 
   if(T.difference > 10000000) {
-    vehours = Math.floor((T.difference % 100000000) / 10000000);
+    vehours = Math.floor((T.difference % 10000000) / 10000000);
     if(vehours < 10) {
-      vehours = '0'+String(vehours);
+      vehours = '2'+String(vehours);
     }
   }
 
@@ -489,7 +484,7 @@ function stopTimer() {
 
 function clearTimer() {
   clearInterval(T.timerInterval);
-  T.timerDiv.innerHTML = "30:30:00:00 20:20:00:0 00:00:00:00";
+  T.timerDiv.innerHTML = "30:30:00:00 20:20:00:00 00:00:00:00";
   T.difference = 0;
 
   document.getElementById('stop').style.display="none";
