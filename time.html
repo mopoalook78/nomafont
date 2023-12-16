@@ -326,11 +326,13 @@ function fontWeight(selectTag) {
     <option>'ss06'</option> 
     <option>'ss07'</option>
     <option>'salt'</option>
+    <option>'lnum'</option>
+    <option>'onum'</option>
+    <option>'pnum'</option>
     <option>'tnum'</option>
     <option>'lnum', 'pnum'</option>
     <option>'lnum', 'tnum'</option>
     <option>'tnum', 'cv01'</option>
-    <option>'pnum'</option>
     <option>'pnum', 'cv01'</option>
     </select>
     <div id='controls'>
@@ -347,8 +349,7 @@ T.timerDiv = document.getElementById('timer');
 
 function displayTimer() {
 
-  var hours='30', minutes='30', seconds='00', miliseconds='00', venir=' ', vehours='20', veminutes='20', veseconds='00', vemiliseconds='00',
-  vthours='00', vtminutes='00', vtseconds='00', vtmiliseconds='00'
+  var hours='30', minutes='30', seconds='00', miliseconds='00', venir=' ', vehours='20', veminutes='20', vtseconds='00'
   time = '',
   timeNow = new Date().getTime();
 
@@ -383,20 +384,6 @@ function displayTimer() {
     }
   }
 
-  if(T.difference > 100) {
-    vemiliseconds = Math.floor((T.difference % 1000) / 100);
-    if(vemiliseconds < 10) {
-      vemiliseconds = '0'+vemiliseconds;
-    }
-  }
-
-  if(T.difference > 1000) {
-    veseconds = Math.floor((T.difference % 100000) / 1000);
-    if(veseconds < 10) {
-      veseconds = '0'+String(veseconds);
-    }
-  }
-
   if(T.difference > 100000) {
     veminutes = Math.floor((T.difference % 1000000) / 100000);
     if(veminutes < 10) {
@@ -417,32 +404,11 @@ function displayTimer() {
       venir = '0'+String(venir);
     }
   }
-
-  if(T.difference > 100) {
-    vtmiliseconds = Math.floor((T.difference % 10000) / 100);
-    if(vtmiliseconds < 10) {
-      vtmiliseconds = '0'+String(vtmiliseconds);
-    }
-  }
-
+  
   if(T.difference > 100) {
     vtseconds = Math.floor((T.difference % 10000) / 100);
     if(vtseconds < 10) {
       vtseconds = '0'+String(vtseconds);
-    }
-  }
-
-  if(T.difference > 100) {
-    vtminutes = Math.floor((T.difference % 10000) / 100);
-    if(vtminutes < 10) {
-      vtminutes = '0'+String(vtminutes);
-    }
-  }
-
-  if(T.difference > 100) {
-    vthours = Math.floor((T.difference % 10000) / 100);
-    if(vthours < 10) {
-      vthours = '0'+String(vthours);
     }
   }
 
@@ -453,13 +419,13 @@ function displayTimer() {
   time += venir  + ' '
   time += vehours  + ':'
   time += veminutes + ':'
-  time += veseconds + ':'
-  time += vemiliseconds + ''
+  time += seconds + ':'
+  time += miliseconds + ''
   time += venir  + ' '
-  time += vthours  + ':'
-  time += vtminutes + ':'
+  time += vtseconds  + ':'
   time += vtseconds + ':'
-  time += vtmiliseconds + ''
+  time += vtseconds + ':'
+  time += vtseconds + ''
 
   T.timerDiv.innerHTML = time;
 }
