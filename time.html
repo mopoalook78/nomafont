@@ -201,7 +201,7 @@ a.button2:hover {
 }
 </style>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 </style>
 <meta charset="UTF-8">
 <title>Time/Время</title>
@@ -265,6 +265,8 @@ function fontWeight(selectTag) {
     <option value="Nunito Sans">Nunito Sans</option>
     <option value="Open Sans">Open Sans</option> 
     <option value="Palatino Linotype">Palatino Linotype</option>
+    <option value="PT Sans">PT Sans</option>
+    <option value="PT Serif">PT Serif</option>
     <option value="Revuerode Gothic">Revuerode Gothic</option>
     <option value="Rockwell Nova">Rockwell Nova</option>
     <option value="Segoe UI">Segoe UI</option>
@@ -280,6 +282,7 @@ function fontWeight(selectTag) {
     <option value="Tahoma">Tahoma</option>  
     <option value="Taporovegro">Taporovegro Serif</option>
     <option value="Tawency Sans">Tawency Sans</option>
+    <option value="Teen Z Emoji">Teen Z Emoji</option>
     <option value="Terminal Sans">Terminal Sans</option>
     <option value="Times New Roman">Times New Roman</option>  
     <option value="Tisemyriad">Tisemyriad Serif</option>
@@ -318,7 +321,6 @@ function fontWeight(selectTag) {
     <select class="solect" id="input-font" style="font-size: 48px" class="input"
     onchange="fontFeatureSettings (this);"> 
     <option>'none'</option>
-    <option>'cv01'</option>
     <option>'ss01'</option>
     <option>'ss02'</option>
     <option>'ss03'</option>
@@ -335,15 +337,15 @@ function fontWeight(selectTag) {
     <option>'lnum', 'tnum'</option>
     <option>'onum', 'pnum'</option>
     <option>'onum', 'tnum'</option>
-    <option>'tnum', 'cv01'</option>
-    <option>'pnum', 'cv01'</option>
+    <option>'tnum', 'ss02'</option>
+    <option>'pnum', 'ss02'</option>
     </select>
     <div id='controls'>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px" onclick='startTimer()' id='go'>+</button>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='stopTimer()' id='stop'>-</button>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px;display: none" onclick='clearTimer()' id='clear'>*</button>
     </div>
-    <div id='timer'>30:30:00:00 20:20:00:00 00:00:00:00</div>
+    <div id='timer'>30:30:00:00</div>
     <div id='labels'>
     </div>
 <script>
@@ -352,7 +354,7 @@ T.timerDiv = document.getElementById('timer');
 
 function displayTimer() {
 
-  var hours='30', minutes='30', seconds='00', miliseconds='00', venir=' ', vehours='20', veminutes='20', vtseconds='00'
+  var hours='30', minutes='30', seconds='00', miliseconds='00'
   time = '',
   timeNow = new Date().getTime();
 
@@ -387,48 +389,10 @@ function displayTimer() {
     }
   }
 
-  if(T.difference > 100000) {
-    veminutes = Math.floor((T.difference % 1000000) / 100000);
-    if(veminutes < 10) {
-      veminutes = '2'+String(veminutes);
-    }
-  }
-
-  if(T.difference > 10000000) {
-    vehours = Math.floor((T.difference % 10000000) / 10000000);
-    if(vehours < 10) {
-      vehours = '2'+String(vehours);
-    }
-  }
-
-  if(T.difference > 10000000) {
-    venir = Math.floor((T.difference % 100000000) / 10000000);
-    if(vehours < 10) {
-      venir = '0'+String(venir);
-    }
-  }
-  
-  if(T.difference > 100) {
-    vtseconds = Math.floor((T.difference % 10000) / 100);
-    if(vtseconds < 10) {
-      vtseconds = '0'+String(vtseconds);
-    }
-  }
-
   time  =  hours   + ':'
   time += minutes + ':'
   time += seconds + ':'
   time += miliseconds + ''
-  time += venir  + ' '
-  time += vehours  + ':'
-  time += veminutes + ':'
-  time += seconds + ':'
-  time += miliseconds + ''
-  time += venir  + ' '
-  time += vtseconds  + ':'
-  time += vtseconds + ':'
-  time += vtseconds + ':'
-  time += vtseconds + ''
 
   T.timerDiv.innerHTML = time;
 }
@@ -461,7 +425,7 @@ function stopTimer() {
 
 function clearTimer() {
   clearInterval(T.timerInterval);
-  T.timerDiv.innerHTML = "30:30:00:00 20:20:00:00 00:00:00:00";
+  T.timerDiv.innerHTML = "30:30:00:00";
   T.difference = 0;
 
   document.getElementById('stop').style.display="none";
