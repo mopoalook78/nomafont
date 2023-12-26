@@ -1,68 +1,55 @@
 <html>
   <head>
     <style>
-      @font-face { font-family: Gotham; font-style: Bold; src: url('font/Gotham Text/Gotham-Bold.ttf'); }
+      @font-face { font-family: Gothamriad Pro; src: url('font/Gothamriad-Pro-Bold.otf'); }
     </style>
-    <title>Помочь проекту!</title>
+    <style>
+    .b1{
+    text-decoration: none;
+    transition-duration: 0.7s;
+    border-radius: 10px;
+    background-color: #093;
+    color:white;
+    }
+    .b1:hover{
+    background-color: white;
+    color:#093;
+    }
+    .b2{
+    text-decoration: none;
+    transition-duration: 0.7s;
+    border-radius: 10px;
+    background-color: #C00;
+    color:white;
+    }
+    .b2:hover{
+    background-color: white;
+    color:#C00;
+    }
+    </style>
+    <title>ПОМОЧЬ ПРОЕКТУ</title>
     <link rel="icon" href="Icon Font.ico">
  </head>
-<body>
-<p style="font-family:Gotham;font-size:68px;text-align:center">Хотите помочь проекту?</p>
-<p style="font-family:Gotham;font-size:46px;text-align:center">Если вы попали на эту страницу, то мы уже рады - значит вам проект понравился и он приносит реальную пользу. Мы очень признательны, если вы готовы помочь в развитии проекта.</p>
-<p></p>
-<p style="font-family:Gotham;font-size:60px;text-align:center;color:rgb(0,153,102);">Самый верный способ!</p>
-<p style="font-family:Gotham;font-size:50px;text-align:center">Перевод по кнопке</p>
-    <form style="font-family:Gotham;font-size:46px;text-align:center">
-        Сколько? BTC (<font face="Tahoma"><b>&#x20bf</b></font>), €, $, ₴ (UAH) <input style="font-family:Gotham;font-size:46px" type="text">
-    </form>
-        <p id = "GFG_UP" style="font-family:Gotham;font-size:46px;text-align:center">
-        </p>
-          
-        <p align="center"><button style="font-family:Gotham;font-size:80px" id="1" onClick="GFG_click(this.id)">
-            ПОКАЗАТЬ НОМЕР КАРТЫ UAH
-        </button></p>
-        <p align="center"><button style="font-family:Gotham;font-size:80px" id="1" onClick="GFG_clickEuro(this.id)">
-            ПОКАЗАТЬ НОМЕР КАРТЫ €
-        </button></p>
-        <p align="center"><button style="font-family:Gotham;font-size:80px" id="1" onClick="GFG_clickDollar(this.id)">
-            ПОКАЗАТЬ НОМЕР КАРТЫ $
-        </button></p>
-        <p align="center"><button style="font-family:Gotham;font-size:80px" id="1" onClick="GFG_clickBTC(this.id)">
-            ПОКАЗАТЬ НОМЕР КАРТЫ BTC
-        </button></p>
-        <p align="center"><button style="font-family:Gotham;font-size:80px" id="1" onClick="GFG_clickx(this.id)">
-            СКРЫТЬ НОМЕР КАРТЫ
-        </button></p>
-  
+<body style="text-align: center;background-color: black;color:white;font-family: Gothamriad Pro;">
+    <br>
+<p id = "GFG_UP" style="font-family:Gothamriad Pro;font-size:46px;text-align:center"></p>
+<font style="font-size:66px">ПОДТВЕРДИТЕ ПОЖАЛУЙСТА ПОМОЩЬ ПРОЕКТУ</font>
+<br>
+<button style="font-size:60px;font-family: inherit;margin-right: 20px;margin-top: 10px;padding: 0px 20px;" id="1" onClick="GFG_click(this.id)">ПОКАЗАТЬ НОМЕР КАРТЫ</button><button style="font-size:60px;padding: 0px 20px;font-family: inherit;" id="1" onClick="GFG_clickx(this.id)">СКРЫТЬ НОМЕР КАРТЫ</button>
         <p id = "GFG_DOWN"
-            style="font-family:Gotham;font-size:70px;text-align:center">
-        </p>
-          
+            style="font-family:Gothamriad Pro;font-size:66px;text-align:center">
+        </p>  
 <script>
-            var el_up = document.getElementById("GFG_UP");
-            var el_down = document.getElementById("GFG_DOWN");
-            el_up.innerHTML = "";
-          
-            function GFG_click(clicked) {
-                el_down.innerHTML = "5168 7559 0969 0980";
-            }
-            function GFG_clickEuro(clicked) {
-                el_down.innerHTML = "???? ???? ???? ????";
-            }
-            function GFG_clickDollar(clicked) {
-                el_down.innerHTML = "#$@# ##$@ @#$@ @#$@";
-            }
-            function GFG_clickBTC(clicked) {
-                el_down.innerHTML = "##$@ $*## @*#$ @#$#";
-            }
-            function GFG_clickx(clicked) {
-                el_down.innerHTML = "";
-            }     
-        </script>
-<a href="https://next.privat24.ua/"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:80px;text-align:center">ПЕРЕЧИСЛИТЬ UAH</button></p></a>
-<a href="https://credit-agricole.ua/"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:80px;text-align:center">ПЕРЕЧИСЛИТЬ €</button></p></a>
-<a href="https://www.paypal.com/us/home"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:80px;text-align:center">ПЕРЕЧИСЛИТЬ $</button></p></a>
-<a href="https://bitcoin.org/uk/choose-your-wallet"><p align="center"><button class="button button1" style="font-family:Gotham;font-size:80px;text-align:center">ПЕРЕЧИСЛИТЬ BTC</button></p></a>
+var el_up = document.getElementById("GFG_UP");
+var el_down = document.getElementById("GFG_DOWN");
+el_up.innerHTML = "";
+function GFG_click(clicked) {
+el_down.innerHTML = "5168 7559 0969 0980";
+}
+function GFG_clickx(clicked) {
+el_down.innerHTML = "";
+}     
+</script>
+<a href="https://next.privat24.ua/" class="b1" style="font-size:66px;margin: 22px;padding: 0px 20px;font-family: inherit;">ПЕРЕЧИСЛИТЬ</a><a href="index.html" class="b2" style="font-size:66px;padding: 0px 20px;font-family: inherit;">ОТМЕНИТЬ ПОМОЩЬ ПРОЕКТУ</a>
 </body>
-<p align="center"><a href="index.html" style="font-family:Gotham;font-size:48px;color:red">Отменить помощь проекту</a></p>
 </html>
