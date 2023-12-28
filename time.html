@@ -205,7 +205,7 @@ a.button2:hover {
 }
 </style>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:wght@900&family=Open+Sans:wght@800&family=PT+Sans:wght@400;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=Source+Sans+3:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:wght@900&family=Open+Sans:wght@800&family=PT+Sans:wght@400;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=Source+Sans+3:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
 </style>
 <meta charset="UTF-8">
 <title>Time/Время</title>
@@ -252,8 +252,6 @@ function fontKerning(selectTag) {
     <option value="'Exo 2'">Exo 2</option>
     <option value="Franklin Gothic Medium">Franklin Gothic Medium</option> 
     <option value="Freesetriad Pro">Freesetriad Pro Black</option> 
-    <option value="Gabriola">Gabriola</option>  
-    <option value="Garamond">Garamond</option>  
     <option value="Georgia">Georgia</option>
     <option value="Georgia Pro">Georgia Pro</option>
     <option value="Gill Sans Nova">Gill Sans Nova</option>
@@ -332,6 +330,7 @@ function fontKerning(selectTag) {
     <option>'onum', 'tnum'</option>
     <option>'tnum', 'ss02'</option>
     <option>'pnum', 'ss02'</option>
+    <option>'zero', 'ss02'</option>
     </select>
     <div id='controls'>
       <button class="button button1" style="width: 400px;height: 100px;font-size: 80px;font-family:initial;text-align: center;border-radius: 10px" onclick='startTimer()' id='go'>+</button>
@@ -375,8 +374,8 @@ function displayTimer() {
     }
   }
 
-  if(T.difference > 10000000) {
-    hours = Math.floor((T.difference % 10000000) / 10000000);
+  if(T.difference > 1000000) {
+    hours = Math.floor((T.difference % 10000000) / 1000000);
     if(hours < 10) {
       hours = '3'+String(hours);
     }
