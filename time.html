@@ -205,7 +205,7 @@ a.button2:hover {
 }
 </style>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:wght@900&family=Open+Sans:wght@800&family=PT+Sans:wght@400;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=Source+Sans+3:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
 </style>
 <meta charset="UTF-8">
 <title>Time/Время</title>
@@ -217,11 +217,17 @@ a.button2:hover {
   } 
 </script>
 <script> 
-function fontWeight(selectTag) {
+function fontKerning(selectTag) {
     var listValue = selectTag.options[selectTag.selectedIndex].text;
-    document.getElementById("timer").style.fontWeight = listValue;
+    document.getElementById("timer").style.fontKerning = listValue;
 }
 </script>
+<script> 
+  function fontWeight(selectTag) {
+      var listValue = selectTag.options[selectTag.selectedIndex].text;
+      document.getElementById("timer").style.fontWeight = listValue;
+  }
+  </script>
 <script> 
   function fontFeatureSettings(selectTag) {
       var listValue = selectTag.options[selectTag.selectedIndex].text;
@@ -235,7 +241,7 @@ function fontWeight(selectTag) {
   }
   </script>
   <body style="background-color: black;text-align:center;font-size: 280px;animation: color-change 10s linear infinite;font-kerning: none">  
-    <select id="input-font" class="solect" style="font-size: 48px" class="input"
+    <select id="input-font" class="solect" style="font-size: 32px" class="input"
     onchange="changeFontStyle (this);"> 
     <option value="Arial">Arial</option>  
     <option value="Arial Black">Arial Black</option>  
@@ -254,19 +260,18 @@ function fontWeight(selectTag) {
     <option value="Gothamriad Pro">Gothamriad Pro</option>
     <option value="Helvetica">Helvetica</option>  
     <option value="Inconsolata">Inconsolata</option>
-    <option value="Monotype Corsiva">Monotype Corsiva</option>
     <option value="Montserrat">Montserrat</option>
     <option value="Myriad Text W">Myriad Text W</option>
     <option value="Nunito Sans">Nunito Sans</option>
     <option value="Open Sans">Open Sans</option> 
     <option value="Palatino Linotype">Palatino Linotype</option>
     <option value="PT Sans">PT Sans</option>
-    <option value="PT Serif">PT Serif</option>
     <option value="Revuerode Gothic">Revuerode Gothic</option>
-    <option value="Rockwell Nova">Rockwell Nova</option>
     <option value="Rotis Emoji">Rotis Emoji</option>
     <option value="Segoe UI">Segoe UI</option>
     <option value="Slavic New Style">Slavic New Style</option>
+    <option value="'Source Sans 3'">Source Sans 3</option>
+    <option value="Source Code Pro">Source Code Pro</option>
     <option value="Stereonical">Stereonical</option>
     <option value="Sylfaen">Sylfaen</option>
     <option value="Tahoma">Tahoma</option>  
@@ -283,20 +288,19 @@ function fontWeight(selectTag) {
     <option value="Yu Gothic">Yu Gothic</option>
     <option value="Zedency Sans">Zedency Sans</option>  
     </select>
-    <select class="solect" id="input-font" style="font-size: 48px" class="input"
-    onchange="fontWeight (this);"> 
-    <option>100</option>
-    <option>200</option>
-    <option>300</option>         
+    <select class="solect" id="input-font" style="font-size: 32px" class="input"
+    onchange="fontKerning (this);"> 
+    <option>None</option>      
     <option>Normal</option>
-    <option>500</option>
-    <option>600</option>
-    <option>Bold</option>
-    <option>800</option>  
-    <option>900</option>
-    <option>1000</option>    
     </select>
-    <select class="solect" id="input-font" style="font-size: 48px" class="input"
+    <select class="solect" id="input-font" style="font-size: 32px" class="input"
+    onchange="fontWeight (this);"> 
+    <option>Normal</option>
+    <option>Bold</option> 
+    <option>800</option>
+    <option>900</option>    
+    </select>
+    <select class="solect" id="input-font" style="font-size: 32px" class="input"
     onchange="fontSize (this);"> 
     <option>100px</option>
     <option>200px</option>
@@ -307,7 +311,7 @@ function fontWeight(selectTag) {
     <option>380px</option> 
     <option>400px</option> 
     </select>
-    <select class="solect" id="input-font" style="font-size: 48px" class="input"
+    <select class="solect" id="input-font" style="font-size: 32px" class="input"
     onchange="fontFeatureSettings (this);"> 
     <option>'none'</option>
     <option>'ss01'</option>
@@ -317,7 +321,6 @@ function fontWeight(selectTag) {
     <option>'ss05'</option>   
     <option>'ss06'</option> 
     <option>'ss07'</option>
-    <option>'salt'</option>
     <option>'lnum'</option>
     <option>'onum'</option>
     <option>'pnum'</option>
