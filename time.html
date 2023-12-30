@@ -217,12 +217,6 @@ a.button2:hover {
   } 
 </script>
 <script> 
-function fontKerning(selectTag) {
-    var listValue = selectTag.options[selectTag.selectedIndex].text;
-    document.getElementById("timer").style.fontKerning = listValue;
-}
-</script>
-<script> 
   function fontWeight(selectTag) {
       var listValue = selectTag.options[selectTag.selectedIndex].text;
       document.getElementById("timer").style.fontWeight = listValue;
@@ -240,29 +234,20 @@ function fontKerning(selectTag) {
       document.getElementById("timer").style.fontSize = listValue;
   }
   </script>
-  <body style="background-color: black;text-align:center;font-size: 280px;animation: color-change 10s linear infinite;font-kerning: none">  
-    <select id="input-font" class="solect" style="font-size: 32px" class="input"
+  <body style="background-color: black;text-align:center;font-size: 280px;animation: color-change 10s linear infinite;font-kerning: none;font-family: Gothamriad Pro">  
+    <select id="input-font" class="solect" style="font-size: 48px" class="input"
     onchange="changeFontStyle (this);"> 
-    <option value="Arial">Arial</option>  
-    <option value="Arial Black">Arial Black</option>  
     <option value="Avante Gothic">Avante Gothic</option>
     <option value="Bookman Sans">Bookman Sans</option>
-    <option value='Calibri'>Calibri</option>
     <option value='Clockirial'>Clockirial</option>
     <option value="'Exo 2'">Exo 2</option>
-    <option value="Franklin Gothic Medium">Franklin Gothic Medium</option> 
     <option value="Freesetriad Pro">Freesetriad Pro Black</option> 
-    <option value="Georgia">Georgia</option>
-    <option value="Georgia Pro">Georgia Pro</option>
-    <option value="Gill Sans Nova">Gill Sans Nova</option>
     <option value="Gothamriad Pro">Gothamriad Pro</option>
-    <option value="Helvetica">Helvetica</option>  
     <option value="Inconsolata">Inconsolata</option>
     <option value="Montserrat">Montserrat</option>
     <option value="Myriad Text W">Myriad Text W</option>
     <option value="Nunito Sans">Nunito Sans</option>
     <option value="Open Sans">Open Sans</option> 
-    <option value="Palatino Linotype">Palatino Linotype</option>
     <option value="PT Sans">PT Sans</option>
     <option value="Revuerode Gothic">Revuerode Gothic</option>
     <option value="Rotis Emoji">Rotis Emoji</option>
@@ -271,34 +256,22 @@ function fontKerning(selectTag) {
     <option value="'Source Sans 3'">Source Sans 3</option>
     <option value="Source Code Pro">Source Code Pro</option>
     <option value="Stereonical">Stereonical</option>
-    <option value="Sylfaen">Sylfaen</option>
-    <option value="Tahoma">Tahoma</option>  
     <option value="Taporovegro">Taporovegro Serif</option>
     <option value="Tawency Sans">Tawency Sans</option>
-    <option value="Terminal Sans">Terminal Sans</option>
-    <option value="Times New Roman">Times New Roman</option>  
+    <option value="Terminal Sans">Terminal Sans</option> 
     <option value="Tisemyriad">Tisemyriad Serif</option>
-    <option value="Trebuchet MS">Trebuchet MS</option>
     <option value="Ubuntu">Ubuntu</option>
     <option value="Ubuntu Mono">Ubuntu Mono</option>  
-    <option value="Verdana">Verdana</option>  
-    <option value="Verdana Pro">Verdana Pro</option>
-    <option value="Yu Gothic">Yu Gothic</option>
     <option value="Zedency Sans">Zedency Sans</option>  
     </select>
-    <select class="solect" id="input-font" style="font-size: 32px" class="input"
-    onchange="fontKerning (this);"> 
-    <option>None</option>      
-    <option>Normal</option>
-    </select>
-    <select class="solect" id="input-font" style="font-size: 32px" class="input"
+    <select class="solect" id="input-font" style="font-size: 48px" class="input"
     onchange="fontWeight (this);"> 
     <option>Normal</option>
     <option>Bold</option> 
     <option>800</option>
     <option>900</option>    
     </select>
-    <select class="solect" id="input-font" style="font-size: 32px" class="input"
+    <select class="solect" id="input-font" style="font-size: 48px" class="input"
     onchange="fontSize (this);"> 
     <option>100px</option>
     <option>200px</option>
@@ -309,7 +282,7 @@ function fontKerning(selectTag) {
     <option>380px</option> 
     <option>400px</option> 
     </select>
-    <select class="solect" id="input-font" style="font-size: 32px" class="input"
+    <select class="solect" id="input-font" style="font-size: 48px" class="input"
     onchange="fontFeatureSettings (this);"> 
     <option>'none'</option>
     <option>'ss01'</option>
@@ -425,7 +398,7 @@ function clearTimer() {
   document.getElementById('clear').style.display="none";
 }
 </script>
-<a class="button2" style="font-family:Gothamriad Pro;font-size:54px" href="index.html">Назад</a>
-<a class="button2" style="font-family:Gothamriad Pro;font-size:54px" href="indexeng.html">Back</a>
+<a class="button2" style="font-size:54px" href="index.html">Назад</a>
+<a class="button2" style="font-size:54px" href="indexeng.html">Back</a>
 </body>
 </html>
